@@ -2,6 +2,20 @@ function Results({ onNav, saved, toggleSave, answers }) {
   const [filter, setFilter] = React.useState('all');
   const [colleges, setColleges] = React.useState(window.UNIVERSITIES);
   const [loading, setLoading] = React.useState(false);
+  const [popupCollege, setPopupCollege] = React.useState(null);
+  const [pitch, setPitch] = React.useState(null);
+
+  const openPitch = async (u) => {
+    setPopupCollege(u);
+    setPitch(null);
+    try {
+      const res = await fetch('/api/pitch', { method: 'POST', body: JSON.stringify({ name: u.name }) });
+      const data = await res.json();
+      setPitch(data.pitch || 'Could not load pitch.');
+    } catch {
+      setPitch('Could not load pitch.');
+    }
+  };
 
   React.useEffect(() => {
     async function fetchMatches() {
@@ -109,7 +123,7 @@ function Results({ onNav, saved, toggleSave, answers }) {
                       title={saved.includes(u.id) ? 'Saved' : 'Save'}>
                       <Icon.bookmark size={14} fill={saved.includes(u.id) ? 'currentColor' : 'none'}/>
                     </button>
-                    <button className="btn sm" onClick={() => onNav('selection')}>View</button>
+                    <button className="btn sm outline" onClick={() => openPitch(u)}>View Pitch</button>
                   </div>
                 </div>
               </div>
@@ -124,6 +138,24 @@ function Results({ onNav, saved, toggleSave, answers }) {
           <div className="mono-tag" style={{ marginTop: 10 }}>Pick 1 to 3 schools to shape your friend matches.</div>
         </div>
       </div>
+
+      {popupCollege && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
+          <div style={{ background: 'var(--bg)', border: '1px solid var(--line)', borderRadius: 24, padding: 32, maxWidth: 500, width: '90%', position: 'relative' }}>
+            <button onClick={() => setPopupCollege(null)} style={{ position: 'absolute', top: 16, right: 16, background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: '50%', width: 32, height: 32, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>✕</button>
+            <h2 style={{ marginTop: 0, marginBottom: 8, fontSize: 24 }}>Why {popupCollege.name}?</h2>
+            <div style={{ color: 'var(--ink-sec)', marginBottom: 20, fontSize: 13, textTransform: 'uppercase', letterSpacing: 1 }}>Counselor's Pitch</div>
+            <div style={{ fontSize: 16, lineHeight: 1.6, minHeight: 80 }}>
+              {pitch ? pitch : <div style={{ opacity: 0.5, fontStyle: 'italic' }}>Generating dynamic pitch...</div>}
+            </div>
+            <div style={{ marginTop: 24 }}>
+               <button className="btn" onClick={() => {toggleSave(popupCollege.id); setPopupCollege(null);}}>
+                 {saved.includes(popupCollege.id) ? 'Saved to List' : 'Save College'}
+               </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

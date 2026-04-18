@@ -31,18 +31,36 @@ function Quiz({ onNav, answers, setAnswers }) {
         <div className="quiz-body">
           <div className="quiz-slide" key={slideKey}>
             <h2>{q.title}</h2>
-            {q.type === 'select' ? (
-              <div style={{ width: '100%', maxWidth: 400, margin: '0 auto', textAlign: 'left' }}>
-                <select 
-                  style={{ width: '100%', border: '1px solid var(--line)', background: 'var(--white)', padding: '16px 20px', fontFamily: 'inherit', fontSize: '16px', color: 'var(--ink)', outline: 'none', borderRadius: 14, cursor: 'pointer', appearance: 'none' }}
-                  value={cur || ''}
-                  onChange={e => choose(e.target.value)}
-                >
-                  <option value="" disabled>Select an option...</option>
-                  {q.options.map(o => (
-                    <option key={o.key} value={o.key}>{o.label}</option>
-                  ))}
-                </select>
+            {q.type === 'multi' ? (
+              <div style={{ width: '100%', maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center', marginBottom: 30 }}>
+                  {q.options.map(o => {
+                    const arr = answers[q.id] || [];
+                    const isSel = arr.includes(o.key);
+                    return (
+                      <button
+                        key={o.key}
+                        style={{ padding: '10px 18px', borderRadius: 20, border: '1px solid var(--line)', background: isSel ? 'var(--ink)' : 'transparent', color: isSel ? 'var(--paper)' : 'var(--ink)', cursor: 'pointer', fontSize: 13, transition: 'all 0.2s' }}
+                        onClick={() => {
+                          let nextArr = [...arr];
+                          if (o.key === 'Any') {
+                            nextArr = ['Any'];
+                          } else {
+                            nextArr = nextArr.filter(k => k !== 'Any');
+                            if (nextArr.includes(o.key)) nextArr = nextArr.filter(k => k !== o.key);
+                            else nextArr.push(o.key);
+                          }
+                          setAnswers({ ...answers, [q.id]: nextArr });
+                        }}
+                      >
+                        {o.label}
+                      </button>
+                    );
+                  })}
+                </div>
+                <button className="btn" onClick={() => {
+                  setTimeout(() => { if (i < total - 1) goTo(i + 1); else onNav('results'); }, 150);
+                }}>Continue <Icon.arrowR size={14}/></button>
               </div>
             ) : (
               <div className="quiz-options">

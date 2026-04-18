@@ -16,10 +16,10 @@ export async function POST(request: Request) {
     }
 
     // Programmatic matching algorithm
-    // 1. Filter by location if specified
+    // 1. Filter by location if specified (array of states)
     const filteredColleges = collegesData.filter(c => {
-      if (answers.q9 && answers.q9 !== 'Any') {
-        return c.state.endsWith(answers.q9);
+      if (answers.q9 && answers.q9.length > 0 && !answers.q9.includes('Any')) {
+        return answers.q9.some((abbr: string) => c.state.endsWith(abbr));
       }
       return true;
     });
