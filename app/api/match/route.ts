@@ -1,19 +1,11 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+
+import { getActiveSchools } from '@/lib/neon';
 
 export async function POST(request: Request) {
   try {
     const { answers } = await request.json();
-    
-    // Read local database
-    const dbPath = path.join(process.cwd(), 'app', 'colleges.json');
-    let collegesData: any[] = [];
-    try {
-      collegesData = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
-    } catch (err) {
-      console.warn("Could not read colleges.json, falling back empty");
-    }
+    const collegesData = await getActiveSchools();
 
     // Programmatic matching algorithm
     // 1. Filter by location if specified
