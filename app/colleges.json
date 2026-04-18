@@ -12,7 +12,8 @@
       "urban"
     ],
     "imageUrl": "https://media.gettyimages.com/id/2191223492/photo/austin-hall-harvard-law-school-building-exterior-harvard-university-cambridge-massachusetts.jpg?s=612x612&w=gi&k=20&c=ckIBt_KMls84r0KQS3KZdGXkWo7eQUT1gnyr-5yrlGw=",
-    "bio": "Known globally for its rigorous academics and historic legacy. The current trend focuses on expanding interdisciplinary AI and sustainability research."
+    "bio": "Known globally for its rigorous academics and historic legacy. The current trend focuses on expanding interdisciplinary AI and sustainability research.",
+    "pitch": "At Harvard, immerse yourself in an unparalleled intellectual ecosystem, where you can conduct groundbreaking research alongside leading faculty at institutions like the Broad Institute of MIT and Harvard. Engage with a flexible yet rigorous academic journey through the distinctive Core Curriculum, designed to broaden your perspective and deepen your critical thinking. Beyond the classroom, experience the transformative House System, a unique residential community fostering mentorship, camaraderie, and lifelong traditions like the historic Commencement. This is where your potential meets limitless opportunity, preparing you to lead and innovate on a global scale."
   },
   {
     "id": "u2",
@@ -27,7 +28,8 @@
       "sunny"
     ],
     "imageUrl": "https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_387440458__3000x2000____v1220x__.jpg",
-    "bio": "The heart of Silicon Valley, blending top-tier technical education with startup culture. Currently seeing a massive surge in climate-tech incubators."
+    "bio": "The heart of Silicon Valley, blending top-tier technical education with startup culture. Currently seeing a massive surge in climate-tech incubators.",
+    "pitch": "At Stanford, you're not just attending a university; you're joining a legacy of innovation and impact on The Farm. Dive into interdisciplinary challenges at the renowned Hasso Plattner Institute of Design (d.school) or contribute to cutting-edge advancements at the Human-Centered AI Institute. Here, surrounded by Silicon Valley's entrepreneurial spirit, you'll gain the tools and network to turn bold ideas into world-changing realities."
   },
   {
     "id": "u3",
@@ -42,7 +44,8 @@
       "intellectual"
     ],
     "imageUrl": "https://thumbs.dreamstime.com/b/exterior-sterling-memorial-library-yale-universit-university-new-haven-connecticut-75644243.jpg",
-    "bio": "Famous for residential colleges and exceptional humanities programs. There is a growing movement around public policy and global affairs initiatives."
+    "bio": "Famous for residential colleges and exceptional humanities programs. There is a growing movement around public policy and global affairs initiatives.",
+    "pitch": "Imagine joining a vibrant intellectual community where the famed residential college system ensures you're part of a supportive \"family\" from day one, fostering lifelong bonds and mentorship. At Yale, you'll engage with groundbreaking ideas, perhaps even through unique programs like Directed Studies, exploring foundational texts with passionate peers and world-class faculty. Beyond the classroom, contribute to a rich tapestry of over 500 student organizations, enriching your experience within New Haven's cultural hub. This isn't just a university; it's an immersive experience designed to challenge, inspire, and prepare you to shape a better world."
   },
   {
     "id": "u4",
@@ -57,7 +60,8 @@
       "intense"
     ],
     "imageUrl": "https://thumbs.dreamstime.com/b/maclaurin-building-massachusetts-institute-technology-mit-cambridge-massachusetts-prestigious-79643605.jpg",
-    "bio": "A global powerhouse in engineering and physical sciences. The latest campus vibe is intensely focused on robotics, quantum computing, and hackerspaces."
+    "bio": "A global powerhouse in engineering and physical sciences. The latest campus vibe is intensely focused on robotics, quantum computing, and hackerspaces.",
+    "pitch": "Are you ready to not just learn, but to build the future? At MIT, you'll immerse yourself in real-world challenges through the transformative Undergraduate Research Opportunities Program (UROP), translating theory into groundbreaking solutions from your very first year. Embrace the unique Independent Activities Period (IAP) each January, a month dedicated to hands-on projects, workshops, and global exploration that epitomizes our \"Mens et Manus\" philosophy. Join the ranks of innovators in Cambridge, where your ideas will truly come to life."
   },
   {
     "id": "u5",
@@ -72,7 +76,8 @@
       "traditional"
     ],
     "imageUrl": "https://c8.alamy.com/comp/JKBGKJ/usa-new-jersey-princeton-princeton-university-princeton-chapel-exterior-JKBGKJ.jpg",
-    "bio": "Known for its tight-knit undergraduate focus and beautiful gothic campus. Students are heavily leaning into new data science and bioengineering trends."
+    "bio": "Known for its tight-knit undergraduate focus and beautiful gothic campus. Students are heavily leaning into new data science and bioengineering trends.",
+    "pitch": "Imagine truly shaping your academic journey from day one, culminating in original research through the required Junior Paper and Senior Thesis, a hallmark of every A.B. degree. You’ll thrive in the close-knit community of our Residential Colleges, where personalized academic and social support ensures you always feel at home. Best of all, Princeton’s transformative \"no-loan\" financial aid policy means your entire focus can be on learning and discovery, not financial burden. This is your opportunity to immerse yourself in an unparalleled education, free to pursue your deepest intellectual passions."
   },
   {
     "id": "u6",
@@ -87,7 +92,8 @@
       "diverse"
     ],
     "imageUrl": "https://eventmanagement.columbia.edu/sites/eventmanagement.columbia.edu/files/styles/imagestyle_serviceimage_landscape/public/content/img/Venues/Outdoor/IMG_7469.jpg?itok=QsnWaHxy",
-    "bio": "Combines an Ivy League classic education with the vibrant energy of NYC. A strong focus lately on social justice and urban tech innovation."
+    "bio": "Combines an Ivy League classic education with the vibrant energy of NYC. A strong focus lately on social justice and urban tech innovation.",
+    "pitch": "A truly exceptional opportunity awaits you here at Columbia University. With renowned urban and intellectual programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u7",
@@ -102,7 +108,8 @@
       "creative"
     ],
     "imageUrl": "https://media.gettyimages.com/id/2205113480/photo/providence-rhode-island-the-main-green-at-brown-university-on-march-17-2025-in-providence.jpg?s=612x612&w=gi&k=20&c=lp2WpDJuSPQ2JAeSHvkUwTuuTEDO-6OKh_MzT5bvgtc=",
-    "bio": "Celebrated for its Open Curriculum allowing complete academic freedom. Currently trending with highly experimental media arts and neurotech."
+    "bio": "Celebrated for its Open Curriculum allowing complete academic freedom. Currently trending with highly experimental media arts and neurotech.",
+    "pitch": "A truly exceptional opportunity awaits you here at Brown University. With renowned progressive and open-curriculum programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u8",
@@ -117,7 +124,8 @@
       "nature"
     ],
     "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a7/45/09/photo1jpg.jpg?w=900&h=500&s=1",
-    "bio": "The largest Ivy, famous for \"any person... any study\" in a beautiful gorge setting. Huge growth in agricultural tech and hotel administration."
+    "bio": "The largest Ivy, famous for \"any person... any study\" in a beautiful gorge setting. Huge growth in agricultural tech and hotel administration.",
+    "pitch": "A truly exceptional opportunity awaits you here at Cornell University. With renowned rural and intense programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u9",
@@ -132,7 +140,8 @@
       "progressive"
     ],
     "imageUrl": "https://i.ebayimg.com/images/g/REEAAOSwvdRlmKH9/s-l400.jpg",
-    "bio": "A spirited public powerhouse known for student activism and CS. The current trend revolves around massive AI clubs and blockchain research."
+    "bio": "A spirited public powerhouse known for student activism and CS. The current trend revolves around massive AI clubs and blockchain research.",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Berkeley. With renowned spirited and tech programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u10",
@@ -147,7 +156,8 @@
       "urban"
     ],
     "imageUrl": "https://thumbs.dreamstime.com/b/ucla-campus-entrance-sign-los-angeles-ca-usa-may-to-public-research-university-located-westwood-neighborhood-54766591.jpg",
-    "bio": "Perfectly blends gorgeous weather, top-tier athletics, and Hollywood proximity. Film and media technology are huge cultural touchstones right now."
+    "bio": "Perfectly blends gorgeous weather, top-tier athletics, and Hollywood proximity. Film and media technology are huge cultural touchstones right now.",
+    "pitch": "Dreaming of a university that blends academic rigor with unparalleled opportunities? UCLA offers just that, with world-renowned programs like the School of Theater, Film and Television and an incredible range of possibilities through its dedicated Undergraduate Research Centers. Immerse yourself in authentic traditions, from the iconic \"8-clap\" to the vibrant energy of Bruin Walk, all while leveraging the dynamic resources of Los Angeles. Join a community where you'll not only learn but innovate, connect, and launch your future amidst a city bursting with potential."
   },
   {
     "id": "u11",
@@ -162,7 +172,8 @@
       "traditional"
     ],
     "imageUrl": "https://nmu.edu/shine/sites/shine/files/styles/re_half_width_sm/public/2025-11/180911-Exterior-Jamrich-Stock_81.jpg.webp.webp?itok=gtEwzlBP",
-    "bio": "Incredible school spirit with a phenomenal college town. Right now, students are highly engaged in automotive tech and sustainable engineering."
+    "bio": "Incredible school spirit with a phenomenal college town. Right now, students are highly engaged in automotive tech and sustainable engineering.",
+    "pitch": "A truly exceptional opportunity awaits you here at University of Michigan. With renowned spirited and college-town programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u12",
@@ -177,7 +188,8 @@
       "music"
     ],
     "imageUrl": "https://enneadweb.s3.amazonaws.com/work-images/1727-UT_eeb/_800x800_crop_center-center_82_none/2022JG09-301.jpg?mtime=1674588735",
-    "bio": "Deeply spirited with a massive campus in a booming tech hub. The music scene and startup cross-pollination are the defining trends here."
+    "bio": "Deeply spirited with a massive campus in a booming tech hub. The music scene and startup cross-pollination are the defining trends here.",
+    "pitch": "A truly exceptional opportunity awaits you here at UT Austin. With renowned spirited and urban programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u13",
@@ -192,7 +204,8 @@
       "traditional"
     ],
     "imageUrl": "https://i.etsystatic.com/5198041/r/il/ea7120/1310457966/il_570xN.1310457966_dzbl.jpg",
-    "bio": "A beautiful, historic public university with fierce basketball loyalty. Currently seeing major trends in public health and civic engagement."
+    "bio": "A beautiful, historic public university with fierce basketball loyalty. Currently seeing major trends in public health and civic engagement.",
+    "pitch": "A truly exceptional opportunity awaits you here at UNC Chapel Hill. With renowned spirited and college-town programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u14",
@@ -207,7 +220,8 @@
       "spirited"
     ],
     "imageUrl": "https://www.bestcollegereviews.org/wp-content/uploads/2014/08/1.-University-of-Virginia-–-Charlottesville-Virginia.jpg",
-    "bio": "Known for its historic Jeffersonian campus and strong honor code. A growing push towards data analytics and global commerce programs is trending."
+    "bio": "Known for its historic Jeffersonian campus and strong honor code. A growing push towards data analytics and global commerce programs is trending.",
+    "pitch": "A truly exceptional opportunity awaits you here at University of Virginia. With renowned historic and traditional programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u15",
@@ -222,7 +236,8 @@
       "tech"
     ],
     "imageUrl": "https://media.istockphoto.com/id/157505397/photo/quandrangle-lawn-at-the-university-of-washington.jpg?s=612x612&w=0&k=20&c=y1TIffgQaLN8AoxZCExNxl_wKoeMq9xIy3_kb8XY2Yg=",
-    "bio": "Breathtaking nature meets urban tech center. The campus is buzzing with cloud computing research and maritime sustainability projects."
+    "bio": "Breathtaking nature meets urban tech center. The campus is buzzing with cloud computing research and maritime sustainability projects.",
+    "pitch": "Want to make a real impact and thrive in a dynamic environment? At the University of Washington, you'll engage with world-class faculty on cutting-edge research, whether through the highly-ranked Paul G. Allen School of Computer Science & Engineering or pioneering global health initiatives. Beyond academics, immerse yourself in authentic campus traditions like the breathtaking cherry blossoms in the Quad each spring, fostering a powerful sense of community. Here, your ambition meets unparalleled resources, preparing you to lead and innovate."
   },
   {
     "id": "u16",
@@ -237,7 +252,8 @@
       "college-town"
     ],
     "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/29/c6/d8/exterior.jpg?w=900&h=500&s=1",
-    "bio": "Famous for its lakefront student union and incredible game days. There is a huge surge in biotech and environmental conservation movements."
+    "bio": "Famous for its lakefront student union and incredible game days. There is a huge surge in biotech and environmental conservation movements.",
+    "pitch": "A truly exceptional opportunity awaits you here at University of Wisconsin. With renowned spirited and lake programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u17",
@@ -252,7 +268,8 @@
       "close-knit"
     ],
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Williams_College_-_West_College_(cropped).jpg/250px-Williams_College_-_West_College_(cropped).jpg",
-    "bio": "An elite liberal arts experience nestled in the mountains. Students are currently very focused on environmental studies and close-knit tutorials."
+    "bio": "An elite liberal arts experience nestled in the mountains. Students are currently very focused on environmental studies and close-knit tutorials.",
+    "pitch": "A truly exceptional opportunity awaits you here at Williams College. With renowned nature and intellectual programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u18",
@@ -267,7 +284,8 @@
       "writing"
     ],
     "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3849207915031215861",
-    "bio": "Known for its entirely open curriculum and consortium access. A rising trend in interdisciplinary study combining STEM and critical theory."
+    "bio": "Known for its entirely open curriculum and consortium access. A rising trend in interdisciplinary study combining STEM and critical theory.",
+    "pitch": "A truly exceptional opportunity awaits you here at Amherst College. With renowned intellectual and open-curriculum programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u19",
@@ -282,7 +300,8 @@
       "suburban"
     ],
     "imageUrl": "https://media.gettyimages.com/id/1864997751/photo/parrish-hall-slightly-obscured-by-leafy-green-trees-swarthmore-college-swarthmore.jpg?s=612x612&w=gi&k=20&c=qq49SKMhZOnyzV-0Jokmi40Apq3rDx0NYNwqfXchXhg=",
-    "bio": "Intensely intellectual and famously rigorous in an arboretum setting. Students are leaning heavily into engineering for social good."
+    "bio": "Intensely intellectual and famously rigorous in an arboretum setting. Students are leaning heavily into engineering for social good.",
+    "pitch": "A truly exceptional opportunity awaits you here at Swarthmore College. With renowned intense and intellectual programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u20",
@@ -297,7 +316,8 @@
       "creative"
     ],
     "imageUrl": "https://www.tclf.org/sites/default/files/styles/full_width/public/thumbnails/image/Pomona_College-Matthew_Traucht2014-7.jpg?itok=32q22xX1",
-    "bio": "A sunny, elite liberal arts college in the Claremont Consortium. Trending toward cross-disciplinary neuroscience and creative media projects."
+    "bio": "A sunny, elite liberal arts college in the Claremont Consortium. Trending toward cross-disciplinary neuroscience and creative media projects.",
+    "pitch": "A truly exceptional opportunity awaits you here at Pomona College. With renowned sunny and close-knit programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u21",
@@ -312,7 +332,8 @@
       "close-knit"
     ],
     "imageUrl": "https://collegeexpertmn.com/wp-content/uploads/2018/04/Bowdoin-campus.jpg",
-    "bio": "Famous for its outing club and coastal Maine location. The current student body is highly active in Arctic studies and oceanographic research."
+    "bio": "Famous for its outing club and coastal Maine location. The current student body is highly active in Arctic studies and oceanographic research.",
+    "pitch": "A truly exceptional opportunity awaits you here at Bowdoin College. With renowned nature and coastal programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u22",
@@ -327,7 +348,8 @@
       "rural"
     ],
     "imageUrl": "https://www.liberalartscolleges.com/wp-content/uploads/2012/09/CarletonProfile2.jpg",
-    "bio": "Quirky, collaborative, and academically rigorous in the Midwest. There is an ongoing trend of combining computer science with the humanities."
+    "bio": "Quirky, collaborative, and academically rigorous in the Midwest. There is an ongoing trend of combining computer science with the humanities.",
+    "pitch": "A truly exceptional opportunity awaits you here at Carleton College. With renowned quirky and intellectual programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u23",
@@ -342,7 +364,8 @@
       "languages"
     ],
     "imageUrl": "https://snworksceo.imgix.net/mbc/bd33b0fc-919d-46ea-910b-f1be4d581c46.sized-1000x1000.jpeg?w=1500&ar=4:3&fit=crop&crop=faces&facepad=3&auto=format",
-    "bio": "World-renowned for its language schools and international studies. Sustainability and global security are massive themes on campus right now."
+    "bio": "World-renowned for its language schools and international studies. Sustainability and global security are massive themes on campus right now.",
+    "pitch": "A truly exceptional opportunity awaits you here at Middlebury College. With renowned nature and outdoorsy programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u24",
@@ -357,7 +380,8 @@
       "civic"
     ],
     "imageUrl": "https://www.macalester.edu/about/wp-content/uploads/sites/191/2020/02/visit-macalester-spring-hero-960x0-c-default.jpg",
-    "bio": "Urban location with a deeply international, civic-minded student body. Very focused on urban studies, global health, and political activism."
+    "bio": "Urban location with a deeply international, civic-minded student body. Very focused on urban studies, global health, and political activism.",
+    "pitch": "A truly exceptional opportunity awaits you here at Macalester College. With renowned urban and international programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u25",
@@ -372,7 +396,8 @@
       "arts-forward"
     ],
     "imageUrl": "https://ctcl.org/wp-content/uploads/2018/08/OhioWesleyan_CTCL-profile-375x195.jpg",
-    "bio": "A historic blend of a world-class conservatory and progressivism. The campus is buzzing with experimental music and environmental action."
+    "bio": "A historic blend of a world-class conservatory and progressivism. The campus is buzzing with experimental music and environmental action.",
+    "pitch": "A truly exceptional opportunity awaits you here at Oberlin College. With renowned music and progressive programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u26",
@@ -387,7 +412,8 @@
       "literary"
     ],
     "imageUrl": "https://www.pepperconstruction.com/sites/default/files/styles/max_1300x1300/public/images/kenyon_pics_212.png?itok=rfa1QsuE",
-    "bio": "Celebrated for its literary tradition and stunning rural campus. Creative writing and political science remain the most dominant cultural trends."
+    "bio": "Celebrated for its literary tradition and stunning rural campus. Creative writing and political science remain the most dominant cultural trends.",
+    "pitch": "A truly exceptional opportunity awaits you here at Kenyon College. With renowned writing and rural programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u27",
@@ -402,7 +428,8 @@
       "independent"
     ],
     "imageUrl": "https://people.reed.edu/~reyn/Photographs/KaulGray.JPG",
-    "bio": "Famously counter-cultural, intellectual, and grade-free. The student body is deeply immersed in thesis projects and niche academic pursuits."
+    "bio": "Famously counter-cultural, intellectual, and grade-free. The student body is deeply immersed in thesis projects and niche academic pursuits.",
+    "pitch": "A truly exceptional opportunity awaits you here at Reed College. With renowned intellectual and quirky programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u28",
@@ -417,7 +444,8 @@
       "film"
     ],
     "imageUrl": "https://www.wdgarch.com/storage/upload/projects/cover/USC Campus Village_cover.jpg",
-    "bio": "A massive network known as the Trojan Family with top film and business programs. The vibe is heavily focused on entertainment tech and startups."
+    "bio": "A massive network known as the Trojan Family with top film and business programs. The vibe is heavily focused on entertainment tech and startups.",
+    "pitch": "A truly exceptional opportunity awaits you here at USC. With renowned spirited and urban programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u29",
@@ -432,7 +460,8 @@
       "creative"
     ],
     "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10202627785695276",
-    "bio": "No walls, just the city. Known for Tisch arts and Stern business. The current trend is deeply intertwined with NYC tech hubs and urban art."
+    "bio": "No walls, just the city. Known for Tisch arts and Stern business. The current trend is deeply intertwined with NYC tech hubs and urban art.",
+    "pitch": "A truly exceptional opportunity awaits you here at NYU. With renowned urban and independent programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u30",
@@ -447,7 +476,8 @@
       "intense"
     ],
     "imageUrl": "https://www.aedynamics.com/wp-content/uploads/2020/01/4.-front-glass-zoom-scaled-1.jpg",
-    "bio": "Intensely focused on the intersection of computer science and drama. Robotics, AI, and HCI (Human-Computer Interaction) are the major ongoing trends."
+    "bio": "Intensely focused on the intersection of computer science and drama. Robotics, AI, and HCI (Human-Computer Interaction) are the major ongoing trends.",
+    "pitch": "A truly exceptional opportunity awaits you here at Carnegie Mellon. With renowned tech and arts-forward programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u31",
@@ -462,7 +492,8 @@
       "traditional"
     ],
     "imageUrl": "https://www.sasaki.com/wp-content/uploads/2019/10/36111_00U_website-1800x2400.jpg",
-    "bio": "Located in the nation’s capital, famous for foreign service. The campus culture is heavily leaning into international policy and ethics in AI."
+    "bio": "Located in the nation’s capital, famous for foreign service. The campus culture is heavily leaning into international policy and ethics in AI.",
+    "pitch": "A truly exceptional opportunity awaits you here at Georgetown University. With renowned urban and civic programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u32",
@@ -477,7 +508,8 @@
       "intense"
     ],
     "imageUrl": "https://media.istockphoto.com/id/1883794482/photo/duke-university-entrance-and-sign-in-durham-nc.jpg?s=612x612&w=0&k=20&c=D9IogBZmR3_qZ9QINfDVwtbLnIqBKsPdewLg_-yEJEM=",
-    "bio": "A beautiful gothic campus with fierce athletics and top-tier research. Current trends involve global health initiatives and biomedical engineering."
+    "bio": "A beautiful gothic campus with fierce athletics and top-tier research. Current trends involve global health initiatives and biomedical engineering.",
+    "pitch": "A truly exceptional opportunity awaits you here at Duke University. With renowned spirited and traditional programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u33",
@@ -492,7 +524,8 @@
       "urban"
     ],
     "imageUrl": "https://jhfre.jhu.edu/wp-content/uploads/2025/12/JHU-Homewood-Aerial_DJI_0003-300x300.jpg",
-    "bio": "The premier destination for pre-med and research. Students are actively driving trends in biotechnology and public health analytics."
+    "bio": "The premier destination for pre-med and research. Students are actively driving trends in biotechnology and public health analytics.",
+    "pitch": "A truly exceptional opportunity awaits you here at Johns Hopkins. With renowned intense and science programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u34",
@@ -507,7 +540,8 @@
       "traditional"
     ],
     "imageUrl": "https://govmarketnews.com/wp-content/uploads/2024/10/The_Wondry-1200x896.png",
-    "bio": "A happy, spirited campus right in the heart of Nashville. There is a huge trend connecting music, business, and educational tech."
+    "bio": "A happy, spirited campus right in the heart of Nashville. There is a huge trend connecting music, business, and educational tech.",
+    "pitch": "A truly exceptional opportunity awaits you here at Vanderbilt University. With renowned spirited and city programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u35",
@@ -522,7 +556,8 @@
       "science"
     ],
     "imageUrl": "https://media.istockphoto.com/id/2212119772/photo/rice-university-main-entrance.jpg?s=612x612&w=0&k=20&c=v-dzFzV0nkQywp5bZd6ppuWZkZ7rXQWrISblMasKKxY=",
-    "bio": "Known for its residential college system and STEM dominance in Houston. The vibe is cooperative, with huge trends in space science and nanotech."
+    "bio": "Known for its residential college system and STEM dominance in Houston. The vibe is cooperative, with huge trends in space science and nanotech.",
+    "pitch": "A truly exceptional opportunity awaits you here at Rice University. With renowned urban and close-knit programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u36",
@@ -537,7 +572,8 @@
       "intellectual"
     ],
     "imageUrl": "https://media.istockphoto.com/id/464388655/photo/tufts-university.jpg?s=170667a&w=is&k=20&c=sbA1aSqE1pfwkhdXUr0IDwH9_-FFgymytTB8R7xLE0w=",
-    "bio": "A global-minded university with a strong focus on active citizenship. Current campus trends highlight international relations and veterinary sciences."
+    "bio": "A global-minded university with a strong focus on active citizenship. Current campus trends highlight international relations and veterinary sciences.",
+    "pitch": "A truly exceptional opportunity awaits you here at Tufts University. With renowned civic and suburban programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u37",
@@ -552,7 +588,8 @@
       "civic"
     ],
     "imageUrl": "https://tff-edr.imgix.net/assets/images/thumbnails/Tulane School of Social Work/TH042016_Tulane_ElkST_P0982.jpg?w=1224&q=70&auto=format",
-    "bio": "Famous for its commitment to public service in vibrant New Orleans. The student body is heavily focused on public health and disaster resilience."
+    "bio": "Famous for its commitment to public service in vibrant New Orleans. The student body is heavily focused on public health and disaster resilience.",
+    "pitch": "A truly exceptional opportunity awaits you here at Tulane University. With renowned spirited and urban programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u38",
@@ -567,7 +604,8 @@
       "suburban"
     ],
     "imageUrl": "https://images.squarespace-cdn.com/content/v1/5bae87af90f904831b50fd3c/1542814364389-KC25O85R6HKJSMGUJJ42/9117_e22.jpg",
-    "bio": "Located next to the CDC, renowned for healthcare and business. The trending campus vibe heavily features biosciences and entrepreneurship."
+    "bio": "Located next to the CDC, renowned for healthcare and business. The trending campus vibe heavily features biosciences and entrepreneurship.",
+    "pitch": "A truly exceptional opportunity awaits you here at Emory University. With renowned urban and health programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u39",
@@ -582,7 +620,8 @@
       "spirited"
     ],
     "imageUrl": "https://s3.us-west-1.amazonaws.com/idtech-2018-media-prd/listing_northwestern_a547c8f40a.jpg",
-    "bio": "Sitting right on Lake Michigan, famously splitting focus between journalism, theater, and engineering. Media tech is a defining trend right now."
+    "bio": "Sitting right on Lake Michigan, famously splitting focus between journalism, theater, and engineering. Media tech is a defining trend right now.",
+    "pitch": "A truly exceptional opportunity awaits you here at Northwestern University. With renowned lake and arts-forward programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "u40",
@@ -597,7 +636,8 @@
       "urban"
     ],
     "imageUrl": "https://c8.alamy.com/comp/RATGPB/buildings-on-the-university-of-chicago-campus-quadrangle-RATGPB.jpg",
-    "bio": "Famously intense intellectual environment where \"fun comes to die\" (jokingly). The current trend is a massive expansion into quantum tech and economics."
+    "bio": "Famously intense intellectual environment where \"fun comes to die\" (jokingly). The current trend is a massive expansion into quantum tech and economics.",
+    "pitch": "A truly exceptional opportunity awaits you here at University of Chicago. With renowned intense and intellectual programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc3",
@@ -612,7 +652,8 @@
       "intellectual"
     ],
     "bio": "Famous for stunning coastal views and rigorous STEM programs. Currently seeing massive growth in cognitive science and oceanographic tech.",
-    "imageUrl": "https://www.onegreenplanet.org/wp-content/uploads/2024/10/shutterstock-2457554597.jpg"
+    "imageUrl": "https://www.onegreenplanet.org/wp-content/uploads/2024/10/shutterstock-2457554597.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC San Diego. With renowned coastal and tech programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc4",
@@ -627,7 +668,8 @@
       "active"
     ],
     "bio": "Perched on the cliffs overlooking the Pacific, balancing fierce academics with a renowned social scene. There is a trending focus on environmental science and physics.",
-    "imageUrl": "https://www.ucsb.edu/sites/default/files/images/pages/Timeline/1995-UC-Santa-Barbara.jpg"
+    "imageUrl": "https://www.ucsb.edu/sites/default/files/images/pages/Timeline/1995-UC-Santa-Barbara.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Santa Barbara. With renowned coastal and spirited programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc5",
@@ -642,7 +684,8 @@
       "creative"
     ],
     "bio": "Known for its giant circular campus and powerhouse esports program. Trending heavily in tech incubation, game design, and cybersecurity.",
-    "imageUrl": "https://www.ubridge.org/wp-content/uploads/2020/09/campus-@IVC-01.png"
+    "imageUrl": "https://www.ubridge.org/wp-content/uploads/2020/09/campus-@IVC-01.png",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Irvine. With renowned suburban and tech programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc6",
@@ -657,7 +700,8 @@
       "active"
     ],
     "bio": "The ultimate quintessential college town famous for its bicycles and agricultural prestige. Massive trends currently in sustainable farming and veterinary sciences.",
-    "imageUrl": "https://www.usgbc.org/sites/default/files/2022-06/ucdshs_night_entry.jpg"
+    "imageUrl": "https://www.usgbc.org/sites/default/files/2022-06/ucdshs_night_entry.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Davis. With renowned nature and college-town programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc7",
@@ -672,7 +716,8 @@
       "creative"
     ],
     "bio": "Nestled completely inside a redwood forest with a deep counter-cultural history. Video game design and astrophysics are buzzing trends among students.",
-    "imageUrl": "https://c8.alamy.com/comp/WJN6BX/uc-santa-cruz-silicon-valley-extension-sign-near-school-campus-WJN6BX.jpg"
+    "imageUrl": "https://c8.alamy.com/comp/WJN6BX/uc-santa-cruz-silicon-valley-extension-sign-near-school-campus-WJN6BX.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Santa Cruz. With renowned nature and progressive programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc8",
@@ -687,7 +732,8 @@
       "active"
     ],
     "bio": "One of the most diverse and rapidly climbing research universities in the UC system. Currently heavily trending in citrus research and public health initiatives.",
-    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/ssqz_As5uAc2Dh7FsWl5ZA/348s.jpg"
+    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/ssqz_As5uAc2Dh7FsWl5ZA/348s.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Riverside. With renowned diverse and suburban programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "uc9",
@@ -702,7 +748,8 @@
       "nature"
     ],
     "bio": "The newest UC campus sitting near Yosemite, offering immense hands-on research. There is a huge push toward sustainability and mechanical engineering.",
-    "imageUrl": "https://www.ucmerced.edu/sites/g/files/ufvvjh1421/f/page/images/bobcatday_sl_170422-5.jpg"
+    "imageUrl": "https://www.ucmerced.edu/sites/g/files/ufvvjh1421/f/page/images/bobcatday_sl_170422-5.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at UC Merced. With renowned close-knit and new programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu1",
@@ -717,7 +764,8 @@
       "active"
     ],
     "bio": "Renowned for its \"Learn by Doing\" motto and fiercely competitive engineering programs. Aerospace and green architecture are massive trends here.",
-    "imageUrl": "https://www.shutterstock.com/image-photo/san-luis-obispo-ca-may-260nw-2627517867.jpg"
+    "imageUrl": "https://www.shutterstock.com/image-photo/san-luis-obispo-ca-may-260nw-2627517867.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at Cal Poly San Luis Obispo. With renowned tech and outdoorsy programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu2",
@@ -732,7 +780,8 @@
       "active"
     ],
     "bio": "A highly spirited, beautiful campus with deep athletic traditions and greek life. Currently buzzing with international business and physical therapy trends.",
-    "imageUrl": "https://www.usnews.com/dims4/USNEWS/6c836fa/17177859217/thumbnail/420x420/quality/85/?url=https://www.usnews.com/cmsmedia/d0/65/8a69cd6b4bea83b27cc6d5020342/sdsu-custom-hero-1920x760px.jpg"
+    "imageUrl": "https://www.usnews.com/dims4/USNEWS/6c836fa/17177859217/thumbnail/420x420/quality/85/?url=https://www.usnews.com/cmsmedia/d0/65/8a69cd6b4bea83b27cc6d5020342/sdsu-custom-hero-1920x760px.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at San Diego State University. With renowned spirited and sunny programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu3",
@@ -747,7 +796,8 @@
       "diverse"
     ],
     "bio": "Often referred to as \"The Beach,\" boasting incredible art, nursing, and business programs. The campus trend heavily features marine biology and graphic design.",
-    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23962350326702890"
+    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23962350326702890",
+    "pitch": "A truly exceptional opportunity awaits you here at Cal State Long Beach. With renowned coastal and creative programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu4",
@@ -762,7 +812,8 @@
       "industry"
     ],
     "bio": "Sitting directly in the heart of downtown San Jose, acting as a direct pipeline to Silicon Valley. Software engineering and animation are hyper-competitive trends.",
-    "imageUrl": "https://as1.ftcdn.net/v2/jpg/12/28/37/20/1000_F_1228372058_ZrXYpnpbHRwgC0CvztmW9lfLsLJm2J4Y.jpg"
+    "imageUrl": "https://as1.ftcdn.net/v2/jpg/12/28/37/20/1000_F_1228372058_ZrXYpnpbHRwgC0CvztmW9lfLsLJm2J4Y.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at San Jose State University. With renowned urban and tech programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu5",
@@ -777,7 +828,8 @@
       "diverse"
     ],
     "bio": "Known for spectacular polytechnic programs and its own horse Arabian center. Hospitality management and civil engineering are currently booming.",
-    "imageUrl": "https://www.cpp.edu/engineering/img/zoom-backgrounds/aerial-ssb.jpg"
+    "imageUrl": "https://www.cpp.edu/engineering/img/zoom-backgrounds/aerial-ssb.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at Cal Poly Pomona. With renowned tech and hands-on programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu6",
@@ -792,7 +844,8 @@
       "active"
     ],
     "bio": "The largest CSU campus with renowned communications and education colleges. Current trends include booming growth in the cinematic and performing arts.",
-    "imageUrl": "https://media.istockphoto.com/id/1332734465/photo/street-view-of-california-state-university-fullerton.jpg?s=612x612&w=0&k=20&c=wipUfSx3rCgEqB9xg0RpRSOe3tYJUGrwjPKNN26LxwA="
+    "imageUrl": "https://media.istockphoto.com/id/1332734465/photo/street-view-of-california-state-university-fullerton.jpg?s=612x612&w=0&k=20&c=wipUfSx3rCgEqB9xg0RpRSOe3tYJUGrwjPKNN26LxwA=",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU Fullerton. With renowned suburban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu7",
@@ -807,7 +860,8 @@
       "progressive"
     ],
     "bio": "A deeply progressive campus with iconic roots in ethnic studies and writing. The vibe heavily leans into broadcast media and social justice advocacy.",
-    "imageUrl": "https://ecbsf.com/sites/default/files/images/LMS-UHS-3168.jpg"
+    "imageUrl": "https://ecbsf.com/sites/default/files/images/LMS-UHS-3168.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at San Francisco State University. With renowned urban and creative programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu8",
@@ -822,7 +876,8 @@
       "diverse"
     ],
     "bio": "Deeply connected to the Central Valley with spectacular agriculture and winemaking programs. Athletic spirit and criminology are major pillars on campus.",
-    "imageUrl": "https://adminfinance.fresnostate.edu/arboretum/images/memplaza-page.jpg"
+    "imageUrl": "https://adminfinance.fresnostate.edu/arboretum/images/memplaza-page.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at Fresno State. With renowned nature and spirited programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu9",
@@ -837,7 +892,8 @@
       "spirited"
     ],
     "bio": "Sitting right in the state capital beneath thousands of trees. Public policy, criminal justice, and nursing are extremely popular campus trends.",
-    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3710228624856515452"
+    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3710228624856515452",
+    "pitch": "Ready to make a real impact? Sacramento State uniquely positions you in California's vibrant capital, offering unparalleled opportunities to engage with state government and policy through programs like the prestigious Legislative Fellows Program. Our distinctive \"River Campus\" isn't just a beautiful setting; it’s a living laboratory fostering hands-on learning and environmental leadership right alongside the American River. Join the Hornet family and launch your future where innovation and community truly thrive."
   },
   {
     "id": "csu10",
@@ -852,7 +908,8 @@
       "diverse"
     ],
     "bio": "Located in the core of the Valley, holding massive influence in music and film industries. The campus is widely trending for its exceptional Deaf studies program.",
-    "imageUrl": "https://i.pinimg.com/236x/db/a8/ff/dba8ff615b54916dc75b9af96f6a0207.jpg"
+    "imageUrl": "https://i.pinimg.com/236x/db/a8/ff/dba8ff615b54916dc75b9af96f6a0207.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU Northridge. With renowned urban and creative programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu11",
@@ -867,7 +924,8 @@
       "hands-on"
     ],
     "bio": "An incredibly diverse urban campus known for profound upward mobility. Nursing, engineering, and criminal justice are rapid growth trends here.",
-    "imageUrl": "https://www.calstatela.edu/sites/default/files/styles/wide/public/IMG_3123-min.jpg?itok=3HljtxF1"
+    "imageUrl": "https://www.calstatela.edu/sites/default/files/styles/wide/public/IMG_3123-min.jpg?itok=3HljtxF1",
+    "pitch": "A truly exceptional opportunity awaits you here at Cal State LA. With renowned urban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu12",
@@ -882,7 +940,8 @@
       "spirited"
     ],
     "bio": "A beautiful, traditional northern California college town wrapped in nature. Renowned for its robust construction management and spirited social scene.",
-    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10162665841474536"
+    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10162665841474536",
+    "pitch": "A truly exceptional opportunity awaits you here at Chico State. With renowned college-town and nature programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu13",
@@ -897,7 +956,8 @@
       "diverse"
     ],
     "bio": "A rapidly expanding modern campus sitting in the foothills of North San Diego. A massive rising trend resides in their modern nursing and active duty veteran programs.",
-    "imageUrl": "https://pbs.twimg.com/media/GtBJgxhaYAEjO2h.jpg"
+    "imageUrl": "https://pbs.twimg.com/media/GtBJgxhaYAEjO2h.jpg",
+    "pitch": "Discover your potential at CSU San Marcos, where innovation meets authentic community engagement right in the heart of North County San Diego. Immerse yourself in distinctive programs like our robust Experience Industry Management or contribute to vital cultural preservation through the nationally recognized California Indian Culture & Sovereignty Center. Join a vibrant campus where traditions like 'The Rock' celebrate student voice, preparing you to make a real impact and graduate with a powerful sense of purpose."
   },
   {
     "id": "csu14",
@@ -912,7 +972,8 @@
       "arts-forward"
     ],
     "bio": "Situated right in the heart of Wine Country offering distinct, liberal-arts style classes. Wine business and education are incredibly popular trends.",
-    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2012/08/sonoma-dorms.jpg"
+    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2012/08/sonoma-dorms.jpg",
+    "pitch": "Dreaming of a college experience nestled in California's stunning wine country, where academic excellence meets unparalleled cultural opportunities? Sonoma State delivers, offering distinctive programs like the nationally recognized Wine Business Institute, which places you at the forefront of a dynamic global industry. Beyond the classroom, immerse yourself in world-class performances at the Green Music Center, a stunning campus gem that brings acclaimed artists and vibrant cultural experiences directly to you, making your education truly unique."
   },
   {
     "id": "csu15",
@@ -927,7 +988,8 @@
       "close-knit"
     ],
     "bio": "A wildly unique campus built on a former army base directly near the ocean. Boasts phenomenal marine science and cinematic arts trends.",
-    "imageUrl": "https://pxl01-csumbedu.terminalfour.net/fit-in/281x223/filters:format(webp)/225x0:2549x1844/prod01/channel_2/media/csumb/brand-images-2025/campus-and-location/017_campus_architecture__environment_031810.jpg"
+    "imageUrl": "https://pxl01-csumbedu.terminalfour.net/fit-in/281x223/filters:format(webp)/225x0:2549x1844/prod01/channel_2/media/csumb/brand-images-2025/campus-and-location/017_campus_architecture__environment_031810.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU Monterey Bay. With renowned coastal and nature programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu16",
@@ -942,7 +1004,8 @@
       "tech"
     ],
     "bio": "Sitting on the hills overlooking the bay with immense diversity and hands-on academics. Known for surging trends in business administration and computer science.",
-    "imageUrl": "https://rs-dev.tutorperini.com/media/6928/csu-core-under-construction.jpg"
+    "imageUrl": "https://rs-dev.tutorperini.com/media/6928/csu-core-under-construction.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU East Bay. With renowned suburban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu17",
@@ -957,7 +1020,8 @@
       "industry"
     ],
     "bio": "Serving the vast Inland Empire with incredible business and supply-chain logistics tracking. National security studies is a remarkably unique and prominent trend here.",
-    "imageUrl": "https://lpa-design-studios.imgix.net/content/heros/Projects/Higher-Education/CSUSB-Center-for-Global-Innovation12.jpg?auto=format&crop=focalpoint&domain=lpa-design-studios.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=1121&ixlib=php-2.3.0&q=60&w=1920"
+    "imageUrl": "https://lpa-design-studios.imgix.net/content/heros/Projects/Higher-Education/CSUSB-Center-for-Global-Innovation12.jpg?auto=format&crop=focalpoint&domain=lpa-design-studios.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=1121&ixlib=php-2.3.0&q=60&w=1920",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU San Bernardino. With renowned suburban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu18",
@@ -972,7 +1036,8 @@
       "outdoorsy"
     ],
     "bio": "Surrounded entirely by sweeping ancient redwood forests and ocean. Forestry, oceanography, and environmental sciences are the undisputed core cultural trends.",
-    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3863908502792734037"
+    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3863908502792734037",
+    "pitch": "Ready to turn your passion for the planet into real-world solutions? As California's newest polytechnic university, Cal Poly Humboldt uniquely immerses you in the heart of redwood forests and the Pacific coast, offering unparalleled hands-on learning in distinctive programs like Marine Biology, Environmental Science, and Forestry. You won't just study sustainable practices here; you'll actively live them, contributing to a vibrant community exemplified by student-run initiatives like the Campus Center for Appropriate Technology (CCAT). Choose Humboldt to build a career that truly makes a difference in the world, directly engaging with the environment you love."
   },
   {
     "id": "csu19",
@@ -987,7 +1052,8 @@
       "industry"
     ],
     "bio": "A crucial higher-education center for the southern Central Valley. Geological sciences and petroleum engineering are incredibly distinct ongoing campus trends.",
-    "imageUrl": "https://i.ytimg.com/vi/huRmkYbwc0o/maxresdefault.jpg"
+    "imageUrl": "https://i.ytimg.com/vi/huRmkYbwc0o/maxresdefault.jpg",
+    "pitch": "Seeking a university where your education directly impacts real-world challenges? CSU Bakersfield empowers students with distinctive programs like our pioneering Renewable Energy Engineering, preparing you to lead critical global advancements. As a designated Hispanic-Serving Institution, we offer unparalleled support and resources tailored to ensure every student thrives in a vibrant, inclusive community. Join the Roadrunner family and discover how CSUB provides a clear path to both personal and professional success."
   },
   {
     "id": "csu20",
@@ -1002,7 +1068,8 @@
       "close-knit"
     ],
     "bio": "A beautifully landscaped, park-like campus serving the local agricultural region. Currently seeing tremendous growth in nursing and local business integration.",
-    "imageUrl": "https://www.calstate.edu/attend/campuses/SiteAssets/campus-facts/campus-fact-data/campus-images/STANISLAUS/stanislaus-2.jpg"
+    "imageUrl": "https://www.calstate.edu/attend/campuses/SiteAssets/campus-facts/campus-fact-data/campus-images/STANISLAUS/stanislaus-2.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at Stanislaus State. With renowned suburban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu21",
@@ -1017,7 +1084,8 @@
       "hands-on"
     ],
     "bio": "Positioned dynamically in the South Bay region of Los Angeles. Phenomenal ongoing trends focus on teacher education, nursing, and sociology.",
-    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/b2dJ6_guNHhBiuOuLRu-lw/348s.jpg"
+    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/b2dJ6_guNHhBiuOuLRu-lw/348s.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU Dominguez Hills. With renowned urban and diverse programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu22",
@@ -1032,7 +1100,8 @@
       "close-knit"
     ],
     "bio": "The newest CSU, boasting a gorgeous historic Spanish-architecture campus near the coast. Deeply focused on interdisciplinary learning and mechatronics.",
-    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2014/11/csuci-library-4.jpg"
+    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2014/11/csuci-library-4.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at CSU Channel Islands. With renowned coastal and new programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   },
   {
     "id": "csu23",
@@ -1047,6 +1116,7 @@
       "hands-on"
     ],
     "bio": "A highly specialized, maritime academy directly on the bay. Students literally learn on a training ship with major trends focused on global logistics and marine engineering.",
-    "imageUrl": "https://maritime-archive.calpoly.edu/_resources/images/golden-beard-2-1.jpg"
+    "imageUrl": "https://maritime-archive.calpoly.edu/_resources/images/golden-beard-2-1.jpg",
+    "pitch": "A truly exceptional opportunity awaits you here at Cal Maritime Academy. With renowned coastal and industry programs, you'll be integrated into a deeply supportive community that values ambition. Embrace this chance to define your legacy!"
   }
 ]
