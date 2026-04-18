@@ -96,9 +96,9 @@ const SCHOOL_IDS = ['u1', 'u2', 'u3', 'u4', 'u5', 'u6', 'u7', 'u8'];
 const DEMO_SOCIAL_LINKS = [
   {
     platform: 'linkedin',
-    handle: 'jen-hsun-huang',
+    handle: 'jenhsunhuang',
     visibility: 'public',
-    url: 'https://www.linkedin.com/in/jen-hsun-huang/',
+    url: 'https://www.linkedin.com/in/jenhsunhuang/',
   },
 ];
 

@@ -75,6 +75,8 @@ export default function MesaApp() {
   const [colleges, setColleges] = useState<MatchedSchool[]>(UNIVERSITIES);
   const [saved, setSaved] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
+  const [selectionDraft, setSelectionDraft] = useState<string[] | null>(null);
+  const [quizSessionKey, setQuizSessionKey] = useState(0);
   const [savedFriends, setSavedFriends] = useState<string[]>([]);
   const [friendFeed, setFriendFeed] = useState<FriendCard[]>([]);
   const [matchProfile, setMatchProfile] = useState<MatchProfileDraft | null>(null);
@@ -151,6 +153,7 @@ export default function MesaApp() {
         setAnswers(data.quizAnswers || {});
         setSaved(Array.isArray(data.savedSchoolIds) ? data.savedSchoolIds : []);
         setSelected(Array.isArray(data.selectedSchoolIds) ? data.selectedSchoolIds : []);
+        setSelectionDraft(null);
 
         if (data.quizAnswers && Object.keys(data.quizAnswers).length > 0) {
           try {
@@ -227,6 +230,7 @@ export default function MesaApp() {
     setColleges(UNIVERSITIES);
     setSaved([]);
     setSelected([]);
+    setSelectionDraft(null);
     setSavedFriends([]);
     setFriendFeed([]);
     setMatchProfile(null);
@@ -354,18 +358,58 @@ export default function MesaApp() {
     });
   };
 
-  const toggleSelect = (id: string) => {
-    setSelected((current) => {
-      const nextValue = current.includes(id)
-        ? current.filter((value) => value !== id)
-        : [...current, id].slice(0, 3);
+  const openSelection = () => {
+    setSelectionDraft((current) => current ?? selected);
+    setRoute('selection');
+  };
 
-      if (isSignedIn && !isDemoMode) {
-        void persistSelectedSchools(nextValue, current);
-      }
+  const startQuiz = () => {
+    setSelectionDraft([]);
+    setQuizSessionKey((current) => current + 1);
+    setRoute('quiz');
+  };
+
+  const startQuizFromLanding = () => {
+    if (!hasAuthAccess) {
+      setRoute('auth');
+      return;
+    }
+
+    startQuiz();
+  };
+
+  const handleNav = (nextRoute: RouteName) => {
+    if (nextRoute === 'quiz') {
+      startQuiz();
+      return;
+    }
+
+    setRoute(nextRoute);
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelectionDraft((current) => {
+      const baseValue = current ?? selected;
+      const nextValue = baseValue.includes(id)
+        ? baseValue.filter((value) => value !== id)
+        : [...baseValue, id].slice(0, 3);
 
       return nextValue;
     });
+  };
+
+  const submitSelectedSchools = () => {
+    const nextValue = selectionDraft ?? selected;
+    const previousValue = selected;
+
+    setSelected(nextValue);
+    setSelectionDraft(null);
+
+    if (isSignedIn && !isDemoMode) {
+      void persistSelectedSchools(nextValue, previousValue);
+    }
+
+    setRoute('network');
   };
 
   const toggleSaveFriend = (id: string) => {
@@ -421,12 +465,13 @@ export default function MesaApp() {
 
   switch (route) {
     case 'auth':
-      content = <Auth onNav={setRoute} onLogin={(mode: 'demo' | 'clerk') => { setIsDemoMode(mode === 'demo'); setRoute('quiz'); }} />;
+      content = <Auth onNav={handleNav} onLogin={(mode: 'demo' | 'clerk') => { setIsDemoMode(mode === 'demo'); startQuiz(); }} />;
       break;
     case 'quiz':
       content = (
         <Quiz
-          onNav={setRoute}
+          key={quizSessionKey}
+          onNav={handleNav}
           answers={answers}
           setAnswers={setAnswers}
           onComplete={(completedAnswers) => {
@@ -440,7 +485,9 @@ export default function MesaApp() {
     case 'results':
       content = (
         <Results
-          onNav={setRoute}
+          onNav={handleNav}
+          onOpenSelection={openSelection}
+          onRetakeQuiz={startQuiz}
           saved={saved}
           toggleSave={toggleSave}
           answers={answers}
@@ -452,8 +499,9 @@ export default function MesaApp() {
     case 'selection':
       content = (
         <Selection
-          onNav={setRoute}
-          selected={selected}
+          onNav={handleNav}
+          onSubmit={submitSelectedSchools}
+          selected={selectionDraft ?? selected}
           toggleSelect={toggleSelect}
           colleges={colleges}
         />
@@ -462,7 +510,7 @@ export default function MesaApp() {
     case 'network':
       content = (
         <Network
-          onNav={setRoute}
+          onNav={handleNav}
           isDemoMode={isDemoMode}
           selected={selected}
           colleges={colleges}
@@ -482,7 +530,7 @@ export default function MesaApp() {
     case 'me':
       content = (
         <MyProfile
-          onNav={setRoute}
+          onNav={handleNav}
           isDemoMode={isDemoMode}
           selected={selected}
           colleges={colleges}
@@ -497,7 +545,7 @@ export default function MesaApp() {
     case 'profile':
       content = (
         <Profile
-          onNav={setRoute}
+          onNav={handleNav}
           profileId={viewProfileId}
           isDemoMode={isDemoMode}
           friendFeed={friendFeed}
@@ -510,10 +558,10 @@ export default function MesaApp() {
       );
       break;
     case 'posts':
-      content = <Posts onNav={setRoute} />;
+      content = <Posts onNav={handleNav} />;
       break;
     default:
-      content = <Landing onNav={setRoute} />;
+      content = <Landing onNav={handleNav} onGetMatched={startQuizFromLanding} />;
       break;
   }
 

@@ -13,6 +13,8 @@ type PitchResponse = {
 
 type ResultsProps = {
   onNav: (route: RouteName) => void;
+  onOpenSelection: () => void;
+  onRetakeQuiz: () => void;
   saved: string[];
   toggleSave: (id: string) => void;
   answers: QuizAnswers;
@@ -46,7 +48,7 @@ function createConfettiPieces(): ConfettiPiece[] {
   }));
 }
 
-export default function Results({ onNav, saved, toggleSave, answers, colleges, setColleges }: ResultsProps) {
+export default function Results({ onNav, onOpenSelection, onRetakeQuiz, saved, toggleSave, answers, colleges, setColleges }: ResultsProps) {
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
@@ -182,7 +184,7 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 8 }}>
             <span className="mono-tag">{saved.length} saved · {visibleList.length} shown</span>
-            <button className="btn ghost sm" onClick={() => onNav('quiz')}>Retake quiz</button>
+            <button className="btn ghost sm" onClick={onRetakeQuiz}>Retake quiz</button>
           </div>
         </div>
 
@@ -245,7 +247,7 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
         )}
 
         <div style={{ marginTop: 40, textAlign: 'center' }}>
-          <button className="btn" onClick={() => onNav('selection')}>
+          <button className="btn" onClick={onOpenSelection}>
             I'm ready to select my schools <Icon.arrowR size={14}/>
           </button>
           <div className="mono-tag" style={{ marginTop: 10 }}>Pick 1 to 3 schools to shape your friend matches.</div>
@@ -270,7 +272,7 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
               <button className="btn" onClick={() => toggleSave(popupCollege.id)}>
                 {saved.includes(popupCollege.id) ? 'Saved to list' : 'Save college'}
               </button>
-              <button className="btn ghost" onClick={() => { setPopupCollege(null); onNav('selection'); }}>
+              <button className="btn ghost" onClick={() => { setPopupCollege(null); onOpenSelection(); }}>
                 Continue to selection
               </button>
             </div>

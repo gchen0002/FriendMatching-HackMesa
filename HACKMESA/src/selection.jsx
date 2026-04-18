@@ -1,6 +1,6 @@
 import { getCompatibilityColor, Icon, Nav, SchoolImage } from './shared';
 
-export default function Selection({ onNav, selected, toggleSelect, colleges }) {
+export default function Selection({ onNav, onSubmit, selected, toggleSelect, colleges }) {
   const max = 3;
   const can = selected.length > 0;
   const collegeList = colleges?.length ? colleges : [];
@@ -47,7 +47,7 @@ export default function Selection({ onNav, selected, toggleSelect, colleges }) {
             <button className="btn ghost sm" onClick={() => onNav('results')}><Icon.arrowL size={12}/> Back to matches</button>
             <button className="btn" disabled={!can}
               style={!can ? { opacity: .35, cursor: 'not-allowed' } : {}}
-              onClick={() => onNav('network')}>
+              onClick={onSubmit}>
               See your network <Icon.arrowR size={14}/>
             </button>
           </div>

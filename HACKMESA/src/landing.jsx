@@ -74,7 +74,7 @@ function useTypewriter(text, speed, delay) {
   };
 }
 
-export default function Landing({ onNav }) {
+export default function Landing({ onNav, onGetMatched }) {
   const [showCanvas, setShowCanvas] = useState(false);
   const titleText = "Find your college.\nFind your people.";
   const { displayed, isDone } = useTypewriter(titleText, 18, 40);
@@ -111,7 +111,7 @@ export default function Landing({ onNav }) {
           </h1>
           <p className={'lede' + (isDone ? ' lede-enter' : '')}>A calmer way to pick your college</p>
           <div className={'ctas' + (isDone ? ' ctas-enter' : '')}>
-            <button className="btn" onClick={() => onNav('auth')}>
+            <button className="btn" onClick={onGetMatched}>
               Get matched <Icon.arrowR size={14}/>
             </button>
             <button className="btn ghost" onClick={() => onNav('auth')}>

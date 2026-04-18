@@ -81,8 +81,8 @@ export async function POST(request: Request) {
       return a.name.localeCompare(b.name);
     });
 
-    // Return a larger deterministic set so the results screen can filter/search beyond the top 8.
-    return NextResponse.json(matches.slice(0, 100));
+    // Return the full deterministic ranked set so results search can find any school.
+    return NextResponse.json(matches);
 
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown match error';
