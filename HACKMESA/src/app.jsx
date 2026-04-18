@@ -14,6 +14,7 @@ import Selection from './selection';
 export default function MesaApp() {
   const [route, setRoute] = useState('landing');
   const [answers, setAnswers] = useState({});
+  const [colleges, setColleges] = useState(UNIVERSITIES);
   const [saved, setSaved] = useState([]);
   const [selected, setSelected] = useState([]);
   const [savedFriends, setSavedFriends] = useState([]);
@@ -38,10 +39,10 @@ export default function MesaApp() {
   }, [route, routeLoaded]);
 
   useEffect(() => {
-    if (route === 'friends' && selected.length === 0) {
-      setSelected([UNIVERSITIES[0].id, UNIVERSITIES[1].id]);
+    if (route === 'friends' && selected.length === 0 && colleges.length >= 2) {
+      setSelected([colleges[0].id, colleges[1].id]);
     }
-  }, [route, selected.length]);
+  }, [route, selected.length, colleges]);
 
   const toggleSave = (id) => {
     setSaved((current) =>
@@ -69,14 +70,31 @@ export default function MesaApp() {
     case 'quiz':
       return <Quiz onNav={setRoute} answers={answers} setAnswers={setAnswers} />;
     case 'results':
-      return <Results onNav={setRoute} saved={saved} toggleSave={toggleSave} />;
+      return (
+        <Results
+          onNav={setRoute}
+          saved={saved}
+          toggleSave={toggleSave}
+          answers={answers}
+          colleges={colleges}
+          setColleges={setColleges}
+        />
+      );
     case 'selection':
-      return <Selection onNav={setRoute} selected={selected} toggleSelect={toggleSelect} />;
+      return (
+        <Selection
+          onNav={setRoute}
+          selected={selected}
+          toggleSelect={toggleSelect}
+          colleges={colleges}
+        />
+      );
     case 'friends':
       return (
         <Friends
           onNav={setRoute}
           selected={selected}
+          colleges={colleges}
           variant={variant}
           setVariant={setVariant}
           savedFriends={savedFriends}

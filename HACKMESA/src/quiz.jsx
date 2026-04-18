@@ -36,17 +36,32 @@ export default function Quiz({ onNav, answers, setAnswers }) {
         <div className="quiz-body">
           <div className="quiz-slide" key={slideKey}>
             <h2>{q.title}</h2>
-            <div className="quiz-options">
-              {q.options.map(o => (
-                <button
-                  key={o.key}
-                  className={'q-option' + (cur === o.key ? ' sel' : '')}
-                  onClick={() => choose(o.key)}
+            {q.type === 'select' ? (
+              <div style={{ width: '100%', maxWidth: 400, margin: '0 auto', textAlign: 'left' }}>
+                <select 
+                  style={{ width: '100%', border: '1px solid var(--line)', background: 'var(--white)', padding: '16px 20px', fontFamily: 'inherit', fontSize: '16px', color: 'var(--ink)', outline: 'none', borderRadius: 14, cursor: 'pointer', appearance: 'none' }}
+                  value={cur || ''}
+                  onChange={e => choose(e.target.value)}
                 >
-                  {o.label}
-                </button>
-              ))}
-            </div>
+                  <option value="" disabled>Select an option...</option>
+                  {q.options.map(o => (
+                    <option key={o.key} value={o.key}>{o.label}</option>
+                  ))}
+                </select>
+              </div>
+            ) : (
+              <div className="quiz-options">
+                {q.options.map(o => (
+                  <button
+                    key={o.key}
+                    className={'q-option' + (cur === o.key ? ' sel' : '')}
+                    onClick={() => choose(o.key)}
+                  >
+                    {o.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {i > 0 ? (

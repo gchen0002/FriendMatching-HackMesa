@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
-import { FRIENDS, UNIVERSITIES } from './data';
+import { FRIENDS } from './data';
 import { Icon, MonoAvatar, Nav, Placeholder } from './shared';
 
-export default function Friends({ onNav, selected, variant, setVariant, savedFriends, toggleSaveFriend }) {
+export default function Friends({ onNav, selected, colleges, variant, setVariant, savedFriends, toggleSaveFriend }) {
   const [idx, setIdx] = useState(0);
   const list = FRIENDS;
   const p = list[idx];
+  const collegeList = colleges?.length ? colleges : [];
   const next = (action) => {
     if (action === 'save') toggleSaveFriend(p.id);
     setIdx((idx + 1) % list.length);
@@ -102,12 +103,12 @@ export default function Friends({ onNav, selected, variant, setVariant, savedFri
 
           <div className="f-block">
             <span className="mono-tag">Based on your picks</span>
-            <div className="mini-schools" style={{ marginTop: 10 }}>
-              {selected.length === 0 && <div style={{ fontSize: 13, color: 'var(--ink-2)' }}>No schools selected yet.</div>}
-              {selected.map((id) => {
-                const u = UNIVERSITIES.find(x => x.id === id);
-                if (!u) return null;
-                return (
+              <div className="mini-schools" style={{ marginTop: 10 }}>
+                {selected.length === 0 && <div style={{ fontSize: 13, color: 'var(--ink-2)' }}>No schools selected yet.</div>}
+                {selected.map((id) => {
+                  const u = collegeList.find((x) => x.id === id);
+                  if (!u) return null;
+                  return (
                   <div key={id} className="mini-school">
                     <span className="dot"></span>
                     <span>{u.name}</span>

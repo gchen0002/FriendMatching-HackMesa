@@ -1,9 +1,9 @@
-import { UNIVERSITIES } from './data';
 import { Icon, Nav, Placeholder } from './shared';
 
-export default function Selection({ onNav, selected, toggleSelect }) {
+export default function Selection({ onNav, selected, toggleSelect, colleges }) {
   const max = 3;
   const can = selected.length > 0;
+  const collegeList = colleges?.length ? colleges : [];
   return (
     <div className="page" data-screen-label="05 Selection">
       <Nav route="results" onNav={onNav} />
@@ -13,14 +13,18 @@ export default function Selection({ onNav, selected, toggleSelect }) {
         <p className="sub">Your picks shape the friend recommendations next. You can change them anytime.</p>
 
         <div className="sel-grid">
-          {UNIVERSITIES.slice(0, 6).map((u, idx) => {
+          {collegeList.slice(0, 6).map((u) => {
             const on = selected.includes(u.id);
             const disabled = !on && selected.length >= max;
             return (
               <div key={u.id} className={'sel-card ' + (on ? 'on' : '')}
                 style={disabled ? { opacity: .4, cursor: 'not-allowed' } : {}}
                 onClick={() => !disabled && toggleSelect(u.id)}>
-                <Placeholder label={u.name.toLowerCase()} height={140} />
+                {u.imageUrl ? (
+                  <img src={u.imageUrl} alt={u.name} style={{ width: '100%', height: 140, objectFit: 'cover', border: '1px solid var(--line)', background: 'var(--paper)', display: 'block' }} />
+                ) : (
+                  <Placeholder label={u.name.toLowerCase()} height={140} />
+                )}
                 <h4>{u.name}</h4>
                 <div className="meta">
                   <span>{u.state}</span>
@@ -38,7 +42,7 @@ export default function Selection({ onNav, selected, toggleSelect }) {
             <span className="mono-tag">{selected.length} of {max} selected</span>
             {selected.length > 0 && (
               <div style={{ marginTop: 4, fontSize: 14, color: 'var(--ink-2)' }}>
-                {selected.map(id => UNIVERSITIES.find(u=>u.id===id).name).join(' · ')}
+                {selected.map((id) => collegeList.find((u) => u.id === id)?.name).filter(Boolean).join(' · ')}
               </div>
             )}
           </div>

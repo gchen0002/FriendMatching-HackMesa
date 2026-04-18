@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "u1",
+    "name": "Harvard University",
+    "state": "Cambridge, MA",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intellectual",
+      "historic",
+      "urban"
+    ],
+    "imageUrl": "https://media.gettyimages.com/id/2191223492/photo/austin-hall-harvard-law-school-building-exterior-harvard-university-cambridge-massachusetts.jpg?s=612x612&w=gi&k=20&c=ckIBt_KMls84r0KQS3KZdGXkWo7eQUT1gnyr-5yrlGw=",
+    "bio": "Known globally for its rigorous academics and historic legacy. The current trend focuses on expanding interdisciplinary AI and sustainability research."
+  },
+  {
+    "id": "u2",
+    "name": "Stanford University",
+    "state": "Stanford, CA",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "building",
+      "tech",
+      "sunny"
+    ],
+    "imageUrl": "https://media.california.com/media/_versions_jpg/articlecomponent/shutterstock_387440458__3000x2000____v1220x__.jpg",
+    "bio": "The heart of Silicon Valley, blending top-tier technical education with startup culture. Currently seeing a massive surge in climate-tech incubators."
+  },
+  {
+    "id": "u3",
+    "name": "Yale University",
+    "state": "New Haven, CT",
+    "size": "Mid · 6k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "writing",
+      "historic",
+      "intellectual"
+    ],
+    "imageUrl": "https://thumbs.dreamstime.com/b/exterior-sterling-memorial-library-yale-universit-university-new-haven-connecticut-75644243.jpg",
+    "bio": "Famous for residential colleges and exceptional humanities programs. There is a growing movement around public policy and global affairs initiatives."
+  },
+  {
+    "id": "u4",
+    "name": "MIT",
+    "state": "Cambridge, MA",
+    "size": "Small · 4k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "building",
+      "tech",
+      "intense"
+    ],
+    "imageUrl": "https://thumbs.dreamstime.com/b/maclaurin-building-massachusetts-institute-technology-mit-cambridge-massachusetts-prestigious-79643605.jpg",
+    "bio": "A global powerhouse in engineering and physical sciences. The latest campus vibe is intensely focused on robotics, quantum computing, and hackerspaces."
+  },
+  {
+    "id": "u5",
+    "name": "Princeton University",
+    "state": "Princeton, NJ",
+    "size": "Small · 5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intellectual",
+      "suburban",
+      "traditional"
+    ],
+    "imageUrl": "https://c8.alamy.com/comp/JKBGKJ/usa-new-jersey-princeton-princeton-university-princeton-chapel-exterior-JKBGKJ.jpg",
+    "bio": "Known for its tight-knit undergraduate focus and beautiful gothic campus. Students are heavily leaning into new data science and bioengineering trends."
+  },
+  {
+    "id": "u6",
+    "name": "Columbia University",
+    "state": "New York, NY",
+    "size": "Mid · 8k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "urban",
+      "intellectual",
+      "diverse"
+    ],
+    "imageUrl": "https://eventmanagement.columbia.edu/sites/eventmanagement.columbia.edu/files/styles/imagestyle_serviceimage_landscape/public/content/img/Venues/Outdoor/IMG_7469.jpg?itok=QsnWaHxy",
+    "bio": "Combines an Ivy League classic education with the vibrant energy of NYC. A strong focus lately on social justice and urban tech innovation."
+  },
+  {
+    "id": "u7",
+    "name": "Brown University",
+    "state": "Providence, RI",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "progressive",
+      "open-curriculum",
+      "creative"
+    ],
+    "imageUrl": "https://media.gettyimages.com/id/2205113480/photo/providence-rhode-island-the-main-green-at-brown-university-on-march-17-2025-in-providence.jpg?s=612x612&w=gi&k=20&c=lp2WpDJuSPQ2JAeSHvkUwTuuTEDO-6OKh_MzT5bvgtc=",
+    "bio": "Celebrated for its Open Curriculum allowing complete academic freedom. Currently trending with highly experimental media arts and neurotech."
+  },
+  {
+    "id": "u8",
+    "name": "Cornell University",
+    "state": "Ithaca, NY",
+    "size": "Large · 15k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "rural",
+      "intense",
+      "nature"
+    ],
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a7/45/09/photo1jpg.jpg?w=900&h=500&s=1",
+    "bio": "The largest Ivy, famous for \"any person... any study\" in a beautiful gorge setting. Huge growth in agricultural tech and hotel administration."
+  },
+  {
+    "id": "u9",
+    "name": "UC Berkeley",
+    "state": "Berkeley, CA",
+    "size": "Large · 32k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "spirited",
+      "tech",
+      "progressive"
+    ],
+    "imageUrl": "https://i.ebayimg.com/images/g/REEAAOSwvdRlmKH9/s-l400.jpg",
+    "bio": "A spirited public powerhouse known for student activism and CS. The current trend revolves around massive AI clubs and blockchain research."
+  },
+  {
+    "id": "u10",
+    "name": "UCLA",
+    "state": "Los Angeles, CA",
+    "size": "Large · 32k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "spirited",
+      "sunny",
+      "urban"
+    ],
+    "imageUrl": "https://thumbs.dreamstime.com/b/ucla-campus-entrance-sign-los-angeles-ca-usa-may-to-public-research-university-located-westwood-neighborhood-54766591.jpg",
+    "bio": "Perfectly blends gorgeous weather, top-tier athletics, and Hollywood proximity. Film and media technology are huge cultural touchstones right now."
+  },
+  {
+    "id": "u11",
+    "name": "University of Michigan",
+    "state": "Ann Arbor, MI",
+    "size": "Large · 32k",
+    "tuition": "$$",
+    "band": "mid",
+    "tags": [
+      "spirited",
+      "college-town",
+      "traditional"
+    ],
+    "imageUrl": "https://nmu.edu/shine/sites/shine/files/styles/re_half_width_sm/public/2025-11/180911-Exterior-Jamrich-Stock_81.jpg.webp.webp?itok=gtEwzlBP",
+    "bio": "Incredible school spirit with a phenomenal college town. Right now, students are highly engaged in automotive tech and sustainable engineering."
+  },
+  {
+    "id": "u12",
+    "name": "UT Austin",
+    "state": "Austin, TX",
+    "size": "Very Large · 40k+",
+    "tuition": "$$",
+    "band": "mid",
+    "tags": [
+      "spirited",
+      "urban",
+      "music"
+    ],
+    "imageUrl": "https://enneadweb.s3.amazonaws.com/work-images/1727-UT_eeb/_800x800_crop_center-center_82_none/2022JG09-301.jpg?mtime=1674588735",
+    "bio": "Deeply spirited with a massive campus in a booming tech hub. The music scene and startup cross-pollination are the defining trends here."
+  },
+  {
+    "id": "u13",
+    "name": "UNC Chapel Hill",
+    "state": "Chapel Hill, NC",
+    "size": "Large · 19k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "spirited",
+      "college-town",
+      "traditional"
+    ],
+    "imageUrl": "https://i.etsystatic.com/5198041/r/il/ea7120/1310457966/il_570xN.1310457966_dzbl.jpg",
+    "bio": "A beautiful, historic public university with fierce basketball loyalty. Currently seeing major trends in public health and civic engagement."
+  },
+  {
+    "id": "u14",
+    "name": "University of Virginia",
+    "state": "Charlottesville, VA",
+    "size": "Large · 17k",
+    "tuition": "$$",
+    "band": "mid",
+    "tags": [
+      "historic",
+      "traditional",
+      "spirited"
+    ],
+    "imageUrl": "https://www.bestcollegereviews.org/wp-content/uploads/2014/08/1.-University-of-Virginia-–-Charlottesville-Virginia.jpg",
+    "bio": "Known for its historic Jeffersonian campus and strong honor code. A growing push towards data analytics and global commerce programs is trending."
+  },
+  {
+    "id": "u15",
+    "name": "University of Washington",
+    "state": "Seattle, WA",
+    "size": "Very Large · 32k+",
+    "tuition": "$$",
+    "band": "mid",
+    "tags": [
+      "urban",
+      "nature",
+      "tech"
+    ],
+    "imageUrl": "https://media.istockphoto.com/id/157505397/photo/quandrangle-lawn-at-the-university-of-washington.jpg?s=612x612&w=0&k=20&c=y1TIffgQaLN8AoxZCExNxl_wKoeMq9xIy3_kb8XY2Yg=",
+    "bio": "Breathtaking nature meets urban tech center. The campus is buzzing with cloud computing research and maritime sustainability projects."
+  },
+  {
+    "id": "u16",
+    "name": "University of Wisconsin",
+    "state": "Madison, WI",
+    "size": "Large · 33k",
+    "tuition": "$$",
+    "band": "mid",
+    "tags": [
+      "spirited",
+      "lake",
+      "college-town"
+    ],
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/29/c6/d8/exterior.jpg?w=900&h=500&s=1",
+    "bio": "Famous for its lakefront student union and incredible game days. There is a huge surge in biotech and environmental conservation movements."
+  },
+  {
+    "id": "u17",
+    "name": "Williams College",
+    "state": "Williamstown, MA",
+    "size": "Small · 2k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "nature",
+      "intellectual",
+      "close-knit"
+    ],
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Williams_College_-_West_College_(cropped).jpg/250px-Williams_College_-_West_College_(cropped).jpg",
+    "bio": "An elite liberal arts experience nestled in the mountains. Students are currently very focused on environmental studies and close-knit tutorials."
+  },
+  {
+    "id": "u18",
+    "name": "Amherst College",
+    "state": "Amherst, MA",
+    "size": "Small · 1.8k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intellectual",
+      "open-curriculum",
+      "writing"
+    ],
+    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3849207915031215861",
+    "bio": "Known for its entirely open curriculum and consortium access. A rising trend in interdisciplinary study combining STEM and critical theory."
+  },
+  {
+    "id": "u19",
+    "name": "Swarthmore College",
+    "state": "Swarthmore, PA",
+    "size": "Small · 1.6k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intense",
+      "intellectual",
+      "suburban"
+    ],
+    "imageUrl": "https://media.gettyimages.com/id/1864997751/photo/parrish-hall-slightly-obscured-by-leafy-green-trees-swarthmore-college-swarthmore.jpg?s=612x612&w=gi&k=20&c=qq49SKMhZOnyzV-0Jokmi40Apq3rDx0NYNwqfXchXhg=",
+    "bio": "Intensely intellectual and famously rigorous in an arboretum setting. Students are leaning heavily into engineering for social good."
+  },
+  {
+    "id": "u20",
+    "name": "Pomona College",
+    "state": "Claremont, CA",
+    "size": "Small · 1.7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "sunny",
+      "close-knit",
+      "creative"
+    ],
+    "imageUrl": "https://www.tclf.org/sites/default/files/styles/full_width/public/thumbnails/image/Pomona_College-Matthew_Traucht2014-7.jpg?itok=32q22xX1",
+    "bio": "A sunny, elite liberal arts college in the Claremont Consortium. Trending toward cross-disciplinary neuroscience and creative media projects."
+  },
+  {
+    "id": "u21",
+    "name": "Bowdoin College",
+    "state": "Brunswick, ME",
+    "size": "Small · 1.9k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "nature",
+      "coastal",
+      "close-knit"
+    ],
+    "imageUrl": "https://collegeexpertmn.com/wp-content/uploads/2018/04/Bowdoin-campus.jpg",
+    "bio": "Famous for its outing club and coastal Maine location. The current student body is highly active in Arctic studies and oceanographic research."
+  },
+  {
+    "id": "u22",
+    "name": "Carleton College",
+    "state": "Northfield, MN",
+    "size": "Small · 2k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "quirky",
+      "intellectual",
+      "rural"
+    ],
+    "imageUrl": "https://www.liberalartscolleges.com/wp-content/uploads/2012/09/CarletonProfile2.jpg",
+    "bio": "Quirky, collaborative, and academically rigorous in the Midwest. There is an ongoing trend of combining computer science with the humanities."
+  },
+  {
+    "id": "u23",
+    "name": "Middlebury College",
+    "state": "Middlebury, VT",
+    "size": "Small · 2.5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "nature",
+      "outdoorsy",
+      "languages"
+    ],
+    "imageUrl": "https://snworksceo.imgix.net/mbc/bd33b0fc-919d-46ea-910b-f1be4d581c46.sized-1000x1000.jpeg?w=1500&ar=4:3&fit=crop&crop=faces&facepad=3&auto=format",
+    "bio": "World-renowned for its language schools and international studies. Sustainability and global security are massive themes on campus right now."
+  },
+  {
+    "id": "u24",
+    "name": "Macalester College",
+    "state": "St. Paul, MN",
+    "size": "Small · 2.1k",
+    "tuition": "$$$",
+    "band": "mid",
+    "tags": [
+      "urban",
+      "international",
+      "civic"
+    ],
+    "imageUrl": "https://www.macalester.edu/about/wp-content/uploads/sites/191/2020/02/visit-macalester-spring-hero-960x0-c-default.jpg",
+    "bio": "Urban location with a deeply international, civic-minded student body. Very focused on urban studies, global health, and political activism."
+  },
+  {
+    "id": "u25",
+    "name": "Oberlin College",
+    "state": "Oberlin, OH",
+    "size": "Small · 2.9k",
+    "tuition": "$$$",
+    "band": "mid",
+    "tags": [
+      "music",
+      "progressive",
+      "arts-forward"
+    ],
+    "imageUrl": "https://ctcl.org/wp-content/uploads/2018/08/OhioWesleyan_CTCL-profile-375x195.jpg",
+    "bio": "A historic blend of a world-class conservatory and progressivism. The campus is buzzing with experimental music and environmental action."
+  },
+  {
+    "id": "u26",
+    "name": "Kenyon College",
+    "state": "Gambier, OH",
+    "size": "Small · 1.8k",
+    "tuition": "$$$",
+    "band": "mid",
+    "tags": [
+      "writing",
+      "rural",
+      "literary"
+    ],
+    "imageUrl": "https://www.pepperconstruction.com/sites/default/files/styles/max_1300x1300/public/images/kenyon_pics_212.png?itok=rfa1QsuE",
+    "bio": "Celebrated for its literary tradition and stunning rural campus. Creative writing and political science remain the most dominant cultural trends."
+  },
+  {
+    "id": "u27",
+    "name": "Reed College",
+    "state": "Portland, OR",
+    "size": "Small · 1.5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intellectual",
+      "quirky",
+      "independent"
+    ],
+    "imageUrl": "https://people.reed.edu/~reyn/Photographs/KaulGray.JPG",
+    "bio": "Famously counter-cultural, intellectual, and grade-free. The student body is deeply immersed in thesis projects and niche academic pursuits."
+  },
+  {
+    "id": "u28",
+    "name": "USC",
+    "state": "Los Angeles, CA",
+    "size": "Large · 20k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "spirited",
+      "urban",
+      "film"
+    ],
+    "imageUrl": "https://www.wdgarch.com/storage/upload/projects/cover/USC Campus Village_cover.jpg",
+    "bio": "A massive network known as the Trojan Family with top film and business programs. The vibe is heavily focused on entertainment tech and startups."
+  },
+  {
+    "id": "u29",
+    "name": "NYU",
+    "state": "New York, NY",
+    "size": "Large · 27k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "urban",
+      "independent",
+      "creative"
+    ],
+    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10202627785695276",
+    "bio": "No walls, just the city. Known for Tisch arts and Stern business. The current trend is deeply intertwined with NYC tech hubs and urban art."
+  },
+  {
+    "id": "u30",
+    "name": "Carnegie Mellon",
+    "state": "Pittsburgh, PA",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "tech",
+      "arts-forward",
+      "intense"
+    ],
+    "imageUrl": "https://www.aedynamics.com/wp-content/uploads/2020/01/4.-front-glass-zoom-scaled-1.jpg",
+    "bio": "Intensely focused on the intersection of computer science and drama. Robotics, AI, and HCI (Human-Computer Interaction) are the major ongoing trends."
+  },
+  {
+    "id": "u31",
+    "name": "Georgetown University",
+    "state": "Washington, DC",
+    "size": "Mid · 7.5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "urban",
+      "civic",
+      "traditional"
+    ],
+    "imageUrl": "https://www.sasaki.com/wp-content/uploads/2019/10/36111_00U_website-1800x2400.jpg",
+    "bio": "Located in the nation’s capital, famous for foreign service. The campus culture is heavily leaning into international policy and ethics in AI."
+  },
+  {
+    "id": "u32",
+    "name": "Duke University",
+    "state": "Durham, NC",
+    "size": "Mid · 6.5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "spirited",
+      "traditional",
+      "intense"
+    ],
+    "imageUrl": "https://media.istockphoto.com/id/1883794482/photo/duke-university-entrance-and-sign-in-durham-nc.jpg?s=612x612&w=0&k=20&c=D9IogBZmR3_qZ9QINfDVwtbLnIqBKsPdewLg_-yEJEM=",
+    "bio": "A beautiful gothic campus with fierce athletics and top-tier research. Current trends involve global health initiatives and biomedical engineering."
+  },
+  {
+    "id": "u33",
+    "name": "Johns Hopkins",
+    "state": "Baltimore, MD",
+    "size": "Mid · 6k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intense",
+      "science",
+      "urban"
+    ],
+    "imageUrl": "https://jhfre.jhu.edu/wp-content/uploads/2025/12/JHU-Homewood-Aerial_DJI_0003-300x300.jpg",
+    "bio": "The premier destination for pre-med and research. Students are actively driving trends in biotechnology and public health analytics."
+  },
+  {
+    "id": "u34",
+    "name": "Vanderbilt University",
+    "state": "Nashville, TN",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "spirited",
+      "city",
+      "traditional"
+    ],
+    "imageUrl": "https://govmarketnews.com/wp-content/uploads/2024/10/The_Wondry-1200x896.png",
+    "bio": "A happy, spirited campus right in the heart of Nashville. There is a huge trend connecting music, business, and educational tech."
+  },
+  {
+    "id": "u35",
+    "name": "Rice University",
+    "state": "Houston, TX",
+    "size": "Small · 4k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "urban",
+      "close-knit",
+      "science"
+    ],
+    "imageUrl": "https://media.istockphoto.com/id/2212119772/photo/rice-university-main-entrance.jpg?s=612x612&w=0&k=20&c=v-dzFzV0nkQywp5bZd6ppuWZkZ7rXQWrISblMasKKxY=",
+    "bio": "Known for its residential college system and STEM dominance in Houston. The vibe is cooperative, with huge trends in space science and nanotech."
+  },
+  {
+    "id": "u36",
+    "name": "Tufts University",
+    "state": "Medford, MA",
+    "size": "Mid · 6k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "civic",
+      "suburban",
+      "intellectual"
+    ],
+    "imageUrl": "https://media.istockphoto.com/id/464388655/photo/tufts-university.jpg?s=170667a&w=is&k=20&c=sbA1aSqE1pfwkhdXUr0IDwH9_-FFgymytTB8R7xLE0w=",
+    "bio": "A global-minded university with a strong focus on active citizenship. Current campus trends highlight international relations and veterinary sciences."
+  },
+  {
+    "id": "u37",
+    "name": "Tulane University",
+    "state": "New Orleans, LA",
+    "size": "Mid · 8k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "spirited",
+      "urban",
+      "civic"
+    ],
+    "imageUrl": "https://tff-edr.imgix.net/assets/images/thumbnails/Tulane School of Social Work/TH042016_Tulane_ElkST_P0982.jpg?w=1224&q=70&auto=format",
+    "bio": "Famous for its commitment to public service in vibrant New Orleans. The student body is heavily focused on public health and disaster resilience."
+  },
+  {
+    "id": "u38",
+    "name": "Emory University",
+    "state": "Atlanta, GA",
+    "size": "Mid · 7k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "urban",
+      "health",
+      "suburban"
+    ],
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5bae87af90f904831b50fd3c/1542814364389-KC25O85R6HKJSMGUJJ42/9117_e22.jpg",
+    "bio": "Located next to the CDC, renowned for healthcare and business. The trending campus vibe heavily features biosciences and entrepreneurship."
+  },
+  {
+    "id": "u39",
+    "name": "Northwestern University",
+    "state": "Evanston, IL",
+    "size": "Mid · 8k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "lake",
+      "arts-forward",
+      "spirited"
+    ],
+    "imageUrl": "https://s3.us-west-1.amazonaws.com/idtech-2018-media-prd/listing_northwestern_a547c8f40a.jpg",
+    "bio": "Sitting right on Lake Michigan, famously splitting focus between journalism, theater, and engineering. Media tech is a defining trend right now."
+  },
+  {
+    "id": "u40",
+    "name": "University of Chicago",
+    "state": "Chicago, IL",
+    "size": "Mid · 7.5k",
+    "tuition": "$$$$",
+    "band": "high",
+    "tags": [
+      "intense",
+      "intellectual",
+      "urban"
+    ],
+    "imageUrl": "https://c8.alamy.com/comp/RATGPB/buildings-on-the-university-of-chicago-campus-quadrangle-RATGPB.jpg",
+    "bio": "Famously intense intellectual environment where \"fun comes to die\" (jokingly). The current trend is a massive expansion into quantum tech and economics."
+  },
+  {
+    "id": "uc3",
+    "name": "UC San Diego",
+    "state": "La Jolla, CA",
+    "size": "Large · 33k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "tech",
+      "intellectual"
+    ],
+    "bio": "Famous for stunning coastal views and rigorous STEM programs. Currently seeing massive growth in cognitive science and oceanographic tech.",
+    "imageUrl": "https://www.onegreenplanet.org/wp-content/uploads/2024/10/shutterstock-2457554597.jpg"
+  },
+  {
+    "id": "uc4",
+    "name": "UC Santa Barbara",
+    "state": "Santa Barbara, CA",
+    "size": "Large · 23k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "spirited",
+      "active"
+    ],
+    "bio": "Perched on the cliffs overlooking the Pacific, balancing fierce academics with a renowned social scene. There is a trending focus on environmental science and physics.",
+    "imageUrl": "https://www.ucsb.edu/sites/default/files/images/pages/Timeline/1995-UC-Santa-Barbara.jpg"
+  },
+  {
+    "id": "uc5",
+    "name": "UC Irvine",
+    "state": "Irvine, CA",
+    "size": "Large · 30k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "tech",
+      "creative"
+    ],
+    "bio": "Known for its giant circular campus and powerhouse esports program. Trending heavily in tech incubation, game design, and cybersecurity.",
+    "imageUrl": "https://www.ubridge.org/wp-content/uploads/2020/09/campus-@IVC-01.png"
+  },
+  {
+    "id": "uc6",
+    "name": "UC Davis",
+    "state": "Davis, CA",
+    "size": "Large · 31k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "nature",
+      "college-town",
+      "active"
+    ],
+    "bio": "The ultimate quintessential college town famous for its bicycles and agricultural prestige. Massive trends currently in sustainable farming and veterinary sciences.",
+    "imageUrl": "https://www.usgbc.org/sites/default/files/2022-06/ucdshs_night_entry.jpg"
+  },
+  {
+    "id": "uc7",
+    "name": "UC Santa Cruz",
+    "state": "Santa Cruz, CA",
+    "size": "Large · 19k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "nature",
+      "progressive",
+      "creative"
+    ],
+    "bio": "Nestled completely inside a redwood forest with a deep counter-cultural history. Video game design and astrophysics are buzzing trends among students.",
+    "imageUrl": "https://c8.alamy.com/comp/WJN6BX/uc-santa-cruz-silicon-valley-extension-sign-near-school-campus-WJN6BX.jpg"
+  },
+  {
+    "id": "uc8",
+    "name": "UC Riverside",
+    "state": "Riverside, CA",
+    "size": "Large · 23k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "diverse",
+      "suburban",
+      "active"
+    ],
+    "bio": "One of the most diverse and rapidly climbing research universities in the UC system. Currently heavily trending in citrus research and public health initiatives.",
+    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/ssqz_As5uAc2Dh7FsWl5ZA/348s.jpg"
+  },
+  {
+    "id": "uc9",
+    "name": "UC Merced",
+    "state": "Merced, CA",
+    "size": "Mid · 9k",
+    "tuition": "$$",
+    "band": "low",
+    "tags": [
+      "close-knit",
+      "new",
+      "nature"
+    ],
+    "bio": "The newest UC campus sitting near Yosemite, offering immense hands-on research. There is a huge push toward sustainability and mechanical engineering.",
+    "imageUrl": "https://www.ucmerced.edu/sites/g/files/ufvvjh1421/f/page/images/bobcatday_sl_170422-5.jpg"
+  },
+  {
+    "id": "csu1",
+    "name": "Cal Poly San Luis Obispo",
+    "state": "San Luis Obispo, CA",
+    "size": "Large · 22k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "tech",
+      "outdoorsy",
+      "active"
+    ],
+    "bio": "Renowned for its \"Learn by Doing\" motto and fiercely competitive engineering programs. Aerospace and green architecture are massive trends here.",
+    "imageUrl": "https://www.shutterstock.com/image-photo/san-luis-obispo-ca-may-260nw-2627517867.jpg"
+  },
+  {
+    "id": "csu2",
+    "name": "San Diego State University",
+    "state": "San Diego, CA",
+    "size": "Very Large · 36k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "spirited",
+      "sunny",
+      "active"
+    ],
+    "bio": "A highly spirited, beautiful campus with deep athletic traditions and greek life. Currently buzzing with international business and physical therapy trends.",
+    "imageUrl": "https://www.usnews.com/dims4/USNEWS/6c836fa/17177859217/thumbnail/420x420/quality/85/?url=https://www.usnews.com/cmsmedia/d0/65/8a69cd6b4bea83b27cc6d5020342/sdsu-custom-hero-1920x760px.jpg"
+  },
+  {
+    "id": "csu3",
+    "name": "Cal State Long Beach",
+    "state": "Long Beach, CA",
+    "size": "Very Large · 39k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "creative",
+      "diverse"
+    ],
+    "bio": "Often referred to as \"The Beach,\" boasting incredible art, nursing, and business programs. The campus trend heavily features marine biology and graphic design.",
+    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=23962350326702890"
+  },
+  {
+    "id": "csu4",
+    "name": "San Jose State University",
+    "state": "San Jose, CA",
+    "size": "Very Large · 36k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "tech",
+      "industry"
+    ],
+    "bio": "Sitting directly in the heart of downtown San Jose, acting as a direct pipeline to Silicon Valley. Software engineering and animation are hyper-competitive trends.",
+    "imageUrl": "https://as1.ftcdn.net/v2/jpg/12/28/37/20/1000_F_1228372058_ZrXYpnpbHRwgC0CvztmW9lfLsLJm2J4Y.jpg"
+  },
+  {
+    "id": "csu5",
+    "name": "Cal Poly Pomona",
+    "state": "Pomona, CA",
+    "size": "Large · 29k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "tech",
+      "hands-on",
+      "diverse"
+    ],
+    "bio": "Known for spectacular polytechnic programs and its own horse Arabian center. Hospitality management and civil engineering are currently booming.",
+    "imageUrl": "https://www.cpp.edu/engineering/img/zoom-backgrounds/aerial-ssb.jpg"
+  },
+  {
+    "id": "csu6",
+    "name": "CSU Fullerton",
+    "state": "Fullerton, CA",
+    "size": "Very Large · 41k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "diverse",
+      "active"
+    ],
+    "bio": "The largest CSU campus with renowned communications and education colleges. Current trends include booming growth in the cinematic and performing arts.",
+    "imageUrl": "https://media.istockphoto.com/id/1332734465/photo/street-view-of-california-state-university-fullerton.jpg?s=612x612&w=0&k=20&c=wipUfSx3rCgEqB9xg0RpRSOe3tYJUGrwjPKNN26LxwA="
+  },
+  {
+    "id": "csu7",
+    "name": "San Francisco State University",
+    "state": "San Francisco, CA",
+    "size": "Large · 25k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "creative",
+      "progressive"
+    ],
+    "bio": "A deeply progressive campus with iconic roots in ethnic studies and writing. The vibe heavily leans into broadcast media and social justice advocacy.",
+    "imageUrl": "https://ecbsf.com/sites/default/files/images/LMS-UHS-3168.jpg"
+  },
+  {
+    "id": "csu8",
+    "name": "Fresno State",
+    "state": "Fresno, CA",
+    "size": "Large · 24k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "nature",
+      "spirited",
+      "diverse"
+    ],
+    "bio": "Deeply connected to the Central Valley with spectacular agriculture and winemaking programs. Athletic spirit and criminology are major pillars on campus.",
+    "imageUrl": "https://adminfinance.fresnostate.edu/arboretum/images/memplaza-page.jpg"
+  },
+  {
+    "id": "csu9",
+    "name": "Sacramento State",
+    "state": "Sacramento, CA",
+    "size": "Large · 31k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "civic",
+      "spirited"
+    ],
+    "bio": "Sitting right in the state capital beneath thousands of trees. Public policy, criminal justice, and nursing are extremely popular campus trends.",
+    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3710228624856515452"
+  },
+  {
+    "id": "csu10",
+    "name": "CSU Northridge",
+    "state": "Northridge, CA",
+    "size": "Very Large · 38k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "creative",
+      "diverse"
+    ],
+    "bio": "Located in the core of the Valley, holding massive influence in music and film industries. The campus is widely trending for its exceptional Deaf studies program.",
+    "imageUrl": "https://i.pinimg.com/236x/db/a8/ff/dba8ff615b54916dc75b9af96f6a0207.jpg"
+  },
+  {
+    "id": "csu11",
+    "name": "Cal State LA",
+    "state": "Los Angeles, CA",
+    "size": "Large · 27k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "diverse",
+      "hands-on"
+    ],
+    "bio": "An incredibly diverse urban campus known for profound upward mobility. Nursing, engineering, and criminal justice are rapid growth trends here.",
+    "imageUrl": "https://www.calstatela.edu/sites/default/files/styles/wide/public/IMG_3123-min.jpg?itok=3HljtxF1"
+  },
+  {
+    "id": "csu12",
+    "name": "Chico State",
+    "state": "Chico, CA",
+    "size": "Large · 15k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "college-town",
+      "nature",
+      "spirited"
+    ],
+    "bio": "A beautiful, traditional northern California college town wrapped in nature. Renowned for its robust construction management and spirited social scene.",
+    "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10162665841474536"
+  },
+  {
+    "id": "csu13",
+    "name": "CSU San Marcos",
+    "state": "San Marcos, CA",
+    "size": "Large · 16k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "new",
+      "diverse"
+    ],
+    "bio": "A rapidly expanding modern campus sitting in the foothills of North San Diego. A massive rising trend resides in their modern nursing and active duty veteran programs.",
+    "imageUrl": "https://pbs.twimg.com/media/GtBJgxhaYAEjO2h.jpg"
+  },
+  {
+    "id": "csu14",
+    "name": "Sonoma State",
+    "state": "Rohnert Park, CA",
+    "size": "Mid · 7k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "nature",
+      "close-knit",
+      "arts-forward"
+    ],
+    "bio": "Situated right in the heart of Wine Country offering distinct, liberal-arts style classes. Wine business and education are incredibly popular trends.",
+    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2012/08/sonoma-dorms.jpg"
+  },
+  {
+    "id": "csu15",
+    "name": "CSU Monterey Bay",
+    "state": "Seaside, CA",
+    "size": "Mid · 7k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "nature",
+      "close-knit"
+    ],
+    "bio": "A wildly unique campus built on a former army base directly near the ocean. Boasts phenomenal marine science and cinematic arts trends.",
+    "imageUrl": "https://pxl01-csumbedu.terminalfour.net/fit-in/281x223/filters:format(webp)/225x0:2549x1844/prod01/channel_2/media/csumb/brand-images-2025/campus-and-location/017_campus_architecture__environment_031810.jpg"
+  },
+  {
+    "id": "csu16",
+    "name": "CSU East Bay",
+    "state": "Hayward, CA",
+    "size": "Large · 14k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "diverse",
+      "tech"
+    ],
+    "bio": "Sitting on the hills overlooking the bay with immense diversity and hands-on academics. Known for surging trends in business administration and computer science.",
+    "imageUrl": "https://rs-dev.tutorperini.com/media/6928/csu-core-under-construction.jpg"
+  },
+  {
+    "id": "csu17",
+    "name": "CSU San Bernardino",
+    "state": "San Bernardino, CA",
+    "size": "Large · 19k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "diverse",
+      "industry"
+    ],
+    "bio": "Serving the vast Inland Empire with incredible business and supply-chain logistics tracking. National security studies is a remarkably unique and prominent trend here.",
+    "imageUrl": "https://lpa-design-studios.imgix.net/content/heros/Projects/Higher-Education/CSUSB-Center-for-Global-Innovation12.jpg?auto=format&crop=focalpoint&domain=lpa-design-studios.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=1121&ixlib=php-2.3.0&q=60&w=1920"
+  },
+  {
+    "id": "csu18",
+    "name": "Cal Poly Humboldt",
+    "state": "Arcata, CA",
+    "size": "Mid · 5k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "nature",
+      "progressive",
+      "outdoorsy"
+    ],
+    "bio": "Surrounded entirely by sweeping ancient redwood forests and ocean. Forestry, oceanography, and environmental sciences are the undisputed core cultural trends.",
+    "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3863908502792734037"
+  },
+  {
+    "id": "csu19",
+    "name": "CSU Bakersfield",
+    "state": "Bakersfield, CA",
+    "size": "Mid · 9k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "diverse",
+      "industry"
+    ],
+    "bio": "A crucial higher-education center for the southern Central Valley. Geological sciences and petroleum engineering are incredibly distinct ongoing campus trends.",
+    "imageUrl": "https://i.ytimg.com/vi/huRmkYbwc0o/maxresdefault.jpg"
+  },
+  {
+    "id": "csu20",
+    "name": "Stanislaus State",
+    "state": "Turlock, CA",
+    "size": "Mid · 10k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "suburban",
+      "diverse",
+      "close-knit"
+    ],
+    "bio": "A beautifully landscaped, park-like campus serving the local agricultural region. Currently seeing tremendous growth in nursing and local business integration.",
+    "imageUrl": "https://www.calstate.edu/attend/campuses/SiteAssets/campus-facts/campus-fact-data/campus-images/STANISLAUS/stanislaus-2.jpg"
+  },
+  {
+    "id": "csu21",
+    "name": "CSU Dominguez Hills",
+    "state": "Carson, CA",
+    "size": "Large · 17k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "urban",
+      "diverse",
+      "hands-on"
+    ],
+    "bio": "Positioned dynamically in the South Bay region of Los Angeles. Phenomenal ongoing trends focus on teacher education, nursing, and sociology.",
+    "imageUrl": "https://s3-media0.fl.yelpcdn.com/bphoto/b2dJ6_guNHhBiuOuLRu-lw/348s.jpg"
+  },
+  {
+    "id": "csu22",
+    "name": "CSU Channel Islands",
+    "state": "Camarillo, CA",
+    "size": "Mid · 7k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "new",
+      "close-knit"
+    ],
+    "bio": "The newest CSU, boasting a gorgeous historic Spanish-architecture campus near the coast. Deeply focused on interdisciplinary learning and mechatronics.",
+    "imageUrl": "https://campusencounters.wordpress.com/wp-content/uploads/2014/11/csuci-library-4.jpg"
+  },
+  {
+    "id": "csu23",
+    "name": "Cal Maritime Academy",
+    "state": "Vallejo, CA",
+    "size": "Small · 1k",
+    "tuition": "$",
+    "band": "low",
+    "tags": [
+      "coastal",
+      "industry",
+      "hands-on"
+    ],
+    "bio": "A highly specialized, maritime academy directly on the bay. Students literally learn on a training ship with major trends focused on global logistics and marine engineering.",
+    "imageUrl": "https://maritime-archive.calpoly.edu/_resources/images/golden-beard-2-1.jpg"
+  }
+]
