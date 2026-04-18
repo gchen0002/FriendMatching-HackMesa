@@ -1,4 +1,4 @@
-import { Icon, Nav, Placeholder } from './shared';
+import { Icon, Nav, SchoolImage } from './shared';
 
 export default function Selection({ onNav, selected, toggleSelect, colleges }) {
   const max = 3;
@@ -20,11 +20,7 @@ export default function Selection({ onNav, selected, toggleSelect, colleges }) {
               <div key={u.id} className={'sel-card ' + (on ? 'on' : '')}
                 style={disabled ? { opacity: .4, cursor: 'not-allowed' } : {}}
                 onClick={() => !disabled && toggleSelect(u.id)}>
-                {u.imageUrl ? (
-                  <img src={u.imageUrl} alt={u.name} style={{ width: '100%', height: 140, objectFit: 'cover', border: '1px solid var(--line)', background: 'var(--paper)', display: 'block' }} />
-                ) : (
-                  <Placeholder label={u.name.toLowerCase()} height={140} />
-                )}
+                <SchoolImage src={u.imageUrl} alt={u.name} label={u.name.toLowerCase()} height={140} />
                 <h4>{u.name}</h4>
                 <div className="meta">
                   <span>{u.state}</span>

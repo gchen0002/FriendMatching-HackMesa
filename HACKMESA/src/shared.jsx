@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 export function MonoAvatar({ initials, size = 40 }) {
   return (
     <span className="mono-avatar" style={{
@@ -12,6 +14,34 @@ export function Placeholder({ label, height = 160 }) {
     <div className="ph" style={{ height }}>
       {label && <span>{label}</span>}
     </div>
+  );
+}
+
+export function SchoolImage({ src, alt, label, height = 160 }) {
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    setFailed(false);
+  }, [src]);
+
+  if (!src || failed) {
+    return <Placeholder label={label} height={height} />;
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      onError={() => setFailed(true)}
+      style={{
+        width: '100%',
+        height,
+        objectFit: 'cover',
+        border: '1px solid var(--line)',
+        background: 'var(--paper)',
+        display: 'block',
+      }}
+    />
   );
 }
 

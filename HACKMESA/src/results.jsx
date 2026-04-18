@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { UNIVERSITIES } from './data';
-import { Icon, Nav, Placeholder } from './shared';
+import { Icon, Nav, SchoolImage } from './shared';
 
 export default function Results({ onNav, saved, toggleSave, answers, colleges, setColleges }) {
   const [filter, setFilter] = useState('all');
@@ -85,17 +85,11 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
         ) : (
           <div className="result-list">
             {list.map((u, idx) => (
-              <div key={u.id} className={'result ' + (saved.includes(u.id) ? 'saved' : '')}>
-                <div className="rank">{String(idx+1).padStart(2,'0')}</div>
-                {u.imageUrl ? (
+                <div key={u.id} className={'result ' + (saved.includes(u.id) ? 'saved' : '')}>
+                  <div className="rank">{String(idx+1).padStart(2,'0')}</div>
                   <div style={{ width: '100%' }}>
-                    <img src={u.imageUrl} alt={u.name} style={{ width: '100%', height: 120, objectFit: 'cover', border: '1px solid var(--line)', background: 'var(--paper)', display: 'block' }} />
+                    <SchoolImage src={u.imageUrl} alt={u.name} label={u.name.toLowerCase()} height={120} />
                   </div>
-                ) : (
-                  <div style={{ width: '100%' }}>
-                    <Placeholder label={u.name.toLowerCase()} height={120} />
-                  </div>
-                )}
                 <div className="info">
                   <h3>{u.name}</h3>
                   <div className="loc">{u.state} · {u.size} · tuition {u.tuition}</div>
