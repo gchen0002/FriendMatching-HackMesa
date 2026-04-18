@@ -2,19 +2,27 @@ import { NextResponse } from 'next/server';
 
 import { getActiveSchools } from '@/lib/neon';
 
+function matchesSelectedState(location: string, selectedStates: string[]) {
+  if (selectedStates.length === 0 || selectedStates.includes('Any')) {
+    return true;
+  }
+
+  return selectedStates.some((state) => location.endsWith(state));
+}
+
 export async function POST(request: Request) {
   try {
     const { answers } = await request.json();
     const collegesData = await getActiveSchools();
+    const selectedStates = Array.isArray(answers.q9)
+      ? answers.q9
+      : answers.q9
+        ? [answers.q9]
+        : [];
 
     // Programmatic matching algorithm
     // 1. Filter by location if specified
-    const filteredColleges = collegesData.filter(c => {
-      if (answers.q9 && answers.q9 !== 'Any') {
-        return c.state.endsWith(answers.q9);
-      }
-      return true;
-    });
+    const filteredColleges = collegesData.filter((c) => matchesSelectedState(c.state, selectedStates));
 
     // We assign points to each college based on user properties
     const matches = filteredColleges.map(c => {

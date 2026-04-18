@@ -161,9 +161,9 @@ export const QUIZ = [
       { key:'C', label: 'Finding a community or crew', desc: 'A club, team, or house that feels like mine' },
       { key:'D', label: 'Feeling like myself, more often', desc: 'Room to try things on' },
     ]},
-  { id: 'q9', eyebrow: 'Question 09 · Location', type: 'select',
+  { id: 'q9', eyebrow: 'Question 09 · Location', type: 'multi',
     title: "Is there a specific state you want to be in?",
-    hint: "Select a state to only see colleges there, or leave as No Preference.",
+    hint: "Select as many as you like, or choose No Preference to see all matches.",
     options: [
       { key: 'Any', label: 'No Preference' },
       { key: 'CA', label: 'California' },

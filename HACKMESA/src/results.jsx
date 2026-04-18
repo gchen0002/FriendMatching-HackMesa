@@ -6,6 +6,27 @@ import { Icon, Nav, SchoolImage } from './shared';
 export default function Results({ onNav, saved, toggleSave, answers, colleges, setColleges }) {
   const [filter, setFilter] = useState('all');
   const [loading, setLoading] = useState(false);
+  const [popupCollege, setPopupCollege] = useState(null);
+  const [pitch, setPitch] = useState(null);
+
+  const openPitch = async (college) => {
+    setPopupCollege(college);
+    setPitch(null);
+
+    try {
+      const res = await fetch('/api/pitch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: college.id, name: college.name }),
+      });
+
+      const data = await res.json();
+      setPitch(data.pitch || 'Could not load pitch.');
+    } catch (error) {
+      console.error('Pitch fetch failed', error);
+      setPitch('Could not load pitch.');
+    }
+  };
 
   useEffect(() => {
     async function fetchMatches() {
@@ -107,7 +128,7 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
                       title={saved.includes(u.id) ? 'Saved' : 'Save'}>
                       <Icon.bookmark size={14} fill={saved.includes(u.id) ? 'currentColor' : 'none'}/>
                     </button>
-                    <button className="btn sm" onClick={() => onNav('selection')}>View</button>
+                    <button className="btn sm" onClick={() => openPitch(u)}>View pitch</button>
                   </div>
                 </div>
               </div>
@@ -122,6 +143,32 @@ export default function Results({ onNav, saved, toggleSave, answers, colleges, s
           <div className="mono-tag" style={{ marginTop: 10 }}>Pick 1 to 3 schools to shape your friend matches.</div>
         </div>
       </div>
+
+      {popupCollege ? (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20, zIndex: 999 }}>
+          <div style={{ background: 'var(--bg)', border: '1px solid var(--line)', borderRadius: 24, padding: 28, maxWidth: 560, width: '100%', position: 'relative' }}>
+            <button
+              onClick={() => setPopupCollege(null)}
+              style={{ position: 'absolute', top: 16, right: 16, background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: '50%', width: 32, height: 32, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              x
+            </button>
+            <h2 style={{ marginTop: 0, marginBottom: 8, fontSize: 24 }}>Why {popupCollege.name}?</h2>
+            <div style={{ color: 'var(--ink-2)', marginBottom: 18, fontSize: 13, textTransform: 'uppercase', letterSpacing: 1 }}>Counselor pitch</div>
+            <div style={{ fontSize: 16, lineHeight: 1.7, minHeight: 96 }}>
+              {pitch ? pitch : <div style={{ opacity: 0.6, fontStyle: 'italic' }}>Loading pitch...</div>}
+            </div>
+            <div style={{ marginTop: 24, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <button className="btn" onClick={() => toggleSave(popupCollege.id)}>
+                {saved.includes(popupCollege.id) ? 'Saved to list' : 'Save college'}
+              </button>
+              <button className="btn ghost" onClick={() => { setPopupCollege(null); onNav('selection'); }}>
+                Continue to selection
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
