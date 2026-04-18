@@ -1,4 +1,8 @@
-// Curated Unsplash campus photos for each university
+import { Fragment, useEffect, useState } from 'react';
+
+import { UNIVERSITIES } from './data';
+import { Icon, Nav } from './shared';
+
 const CAMPUS_IMAGES = {
   u1: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop&auto=format', // Pomona — liberal arts campus
   u2: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop&auto=format', // Oberlin — college hall
@@ -10,7 +14,6 @@ const CAMPUS_IMAGES = {
   u8: 'https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=200&h=200&fit=crop&auto=format', // UVM — Burlington
 };
 
-// Zone positions: [minLeft%, maxLeft%, minTop%, maxTop%] — avoids center where text sits
 const BUBBLE_ZONES = [
   [3, 16, 6, 30],     // top-left
   [78, 94, 6, 28],    // top-right
@@ -22,13 +25,11 @@ const BUBBLE_ZONES = [
   [62, 76, 80, 94],   // bottom-center-right
 ];
 
-// Deterministic pseudo-random from index to avoid layout shifts on re-render
 function seededOffset(index, min, max) {
   const hash = ((index * 2654435761) >>> 0) / 4294967296;
   return min + hash * (max - min);
 }
 
-// --- useTypewriter hook ---
 function useTypewriter(text, speed, delay) {
   const [charIndex, setCharIndex] = useState(0);
   const [started, setStarted] = useState(false);
@@ -53,7 +54,6 @@ function useTypewriter(text, speed, delay) {
   };
 }
 
-// --- Bubble component (defined outside Landing per rerender-no-inline-components) ---
 function Bubble({ uni, index, size }) {
   const zone = BUBBLE_ZONES[index % BUBBLE_ZONES.length];
   const left = seededOffset(index, zone[0], zone[1]);
@@ -61,9 +61,11 @@ function Bubble({ uni, index, size }) {
   const animName = index % 2 === 0 ? 'floatA' : 'floatB';
   const duration = 18 + index * 3;
   const animDelay = 0.3 + index * 0.25;
+  const morphName = BLOB_MORPHS[index % BLOB_MORPHS.length];
+  const morphDuration = 12 + index * 2;
+  const pulseDelay = index * 1.5;
   const imgSrc = CAMPUS_IMAGES[uni.id];
 
-  // Hide some bubbles on tablet/mobile via CSS classes
   const hideClass = index >= 6 ? ' hide-tablet hide-mobile' : index >= 4 ? ' hide-mobile' : '';
 
   const [imgError, setImgError] = useState(false);
@@ -81,9 +83,12 @@ function Bubble({ uni, index, size }) {
     >
       {imgError ? (
         <div className="ph" style={{
-          width: size, height: size, borderRadius: '50%',
+          width: size, height: size,
+          borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 10
+          fontSize: 10,
+          animation: `${morphName} ${morphDuration}s ease-in-out infinite`,
+          animationDelay: `${animDelay + 0.6}s`,
         }}>
           {uni.name.split(' ')[0]}
         </div>
@@ -95,6 +100,10 @@ function Bubble({ uni, index, size }) {
           height={size}
           loading="lazy"
           onError={() => setImgError(true)}
+          style={{
+            animation: `${morphName} ${morphDuration}s ease-in-out infinite, blobPulse ${morphDuration + 4}s ease-in-out infinite`,
+            animationDelay: `${animDelay + 0.6}s, ${animDelay + 0.6 + pulseDelay}s`,
+          }}
         />
       )}
       <span className="bubble-label">{uni.name.split(',')[0]}</span>
@@ -102,15 +111,14 @@ function Bubble({ uni, index, size }) {
   );
 }
 
-// --- Bubble sizes per index for visual variety ---
 const BUBBLE_SIZES = [130, 110, 140, 100, 120, 105, 135, 115];
+const BLOB_MORPHS = ['blobMorphA', 'blobMorphB', 'blobMorphC', 'blobMorphD'];
 
-function Landing({ onNav }) {
+export default function Landing({ onNav }) {
   const titleText = "Find your college.\nFind your people.";
   const { displayed, isDone } = useTypewriter(titleText, 60, 400);
-  const universities = window.UNIVERSITIES || [];
+  const universities = UNIVERSITIES;
 
-  // Split displayed text on newlines and render with <br/>
   const titleParts = displayed.split('\n');
 
   return (
@@ -133,10 +141,10 @@ function Landing({ onNav }) {
           <span className="eyebrow">A calmer way to pick your college</span>
           <h1 className={isDone ? 'typewriter-done' : 'typewriter-cursor'}>
             {titleParts.map((part, i) => (
-              <React.Fragment key={i}>
+              <Fragment key={i}>
                 {i > 0 ? <br/> : null}
                 {part}
-              </React.Fragment>
+              </Fragment>
             ))}
           </h1>
           <p className={'lede' + (isDone ? ' lede-enter' : '')}>
@@ -161,5 +169,3 @@ function Landing({ onNav }) {
     </div>
   );
 }
-
-window.Landing = Landing;

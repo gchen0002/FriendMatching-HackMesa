@@ -1,4 +1,7 @@
-function Selection({ onNav, selected, toggleSelect }) {
+import { UNIVERSITIES } from './data';
+import { Icon, Nav, Placeholder } from './shared';
+
+export default function Selection({ onNav, selected, toggleSelect }) {
   const max = 3;
   const can = selected.length > 0;
   return (
@@ -52,5 +55,3 @@ function Selection({ onNav, selected, toggleSelect }) {
     </div>
   );
 }
-
-window.Selection = Selection;

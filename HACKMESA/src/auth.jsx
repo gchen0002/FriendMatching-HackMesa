@@ -1,8 +1,12 @@
-function Auth({ onNav, onLogin }) {
-  const [mode, setMode] = React.useState('signup');
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [name, setName] = React.useState('');
+import { useState } from 'react';
+
+import { Icon, Nav } from './shared';
+
+export default function Auth({ onNav, onLogin }) {
+  const [mode, setMode] = useState('signup');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
 
   const submit = (e) => { e && e.preventDefault(); onLogin(name || 'You'); onNav('quiz'); };
 
@@ -58,5 +62,3 @@ function Auth({ onNav, onLogin }) {
     </div>
   );
 }
-
-window.Auth = Auth;

@@ -1,6 +1,4 @@
-// Mock data for Mesa prototype
-
-window.UNIVERSITIES = [
+export const UNIVERSITIES = [
   { id: 'u1', name: 'Pomona College', state: 'Claremont, CA', size: 'Small · 1,700', tuition: '$$$$', band: 'high', tags: ['liberal arts','residential','close-knit'], score: 96,
     why: 'Small, tight-knit liberal arts feel matches how you described your ideal day. Strong creative writing + neuroscience overlap.' },
   { id: 'u2', name: 'Oberlin College', state: 'Oberlin, OH', size: 'Small · 2,900', tuition: '$$$', band: 'mid', tags: ['arts-forward','progressive','music'], score: 93,
@@ -19,7 +17,7 @@ window.UNIVERSITIES = [
     why: 'Public, affordable, and outdoor-forward. Would stretch you socially in a good way.' },
 ];
 
-window.FRIENDS = [
+export const FRIENDS = [
   { id: 'f1', name: 'Maya R.', age: 18, initials: 'MR', school: 'Pomona College (committed)', origin: 'from Oakland, CA',
     bio: "Looking for someone to go on weird museum trips with. Also, please convince me to stop buying records.",
     interests: ['creative writing', 'film photography', 'hiking', 'jazz', 'cooking together'],
@@ -62,7 +60,7 @@ window.FRIENDS = [
     tone: 'clay' },
 ];
 
-window.POSTS = [
+export const POSTS = [
   { id: 'p1', author: 'Maya R.', initials: 'MR', school: 'Pomona',
     title: 'Looking for a weekend hiking crew (no competitive vibes)',
     body: "I want to get off campus most Saturdays. Claremont has good trails within 30 min. Easy pace, good snacks, no one training for anything. Bonus if you like taking bad photos of lizards.",
@@ -90,7 +88,7 @@ window.POSTS = [
     when: '3d ago', saves: 19, replies: 5 },
 ];
 
-window.QUIZ = [
+export const QUIZ = [
   { id: 'q1', eyebrow: 'Question 01 · Academics',
     title: "What pulls you first: ideas, making, or helping?",
     hint: "Rough is fine. We'll get more specific later.",

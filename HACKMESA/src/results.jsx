@@ -1,5 +1,10 @@
-function Results({ onNav, saved, toggleSave }) {
-  const [filter, setFilter] = React.useState('all');
+import { useState } from 'react';
+
+import { UNIVERSITIES } from './data';
+import { Icon, Nav, Placeholder } from './shared';
+
+export default function Results({ onNav, saved, toggleSave }) {
+  const [filter, setFilter] = useState('all');
   const filters = [
     { id: 'all', label: 'All matches' },
     { id: 'high', label: 'Best fit (90+)' },
@@ -77,5 +82,3 @@ function Results({ onNav, saved, toggleSave }) {
     </div>
   );
 }
-
-window.Results = Results;

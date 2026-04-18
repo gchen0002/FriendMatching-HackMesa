@@ -1,73 +1,91 @@
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "friendCard": "hinge"
-}/*EDITMODE-END*/;
+'use client';
 
-function App() {
-  const [route, setRoute] = React.useState(() => localStorage.getItem('mesa.route') || 'landing');
-  const [answers, setAnswers] = React.useState({});
-  const [saved, setSaved] = React.useState([]);
-  const [selected, setSelected] = React.useState([]);
-  const [savedFriends, setSavedFriends] = React.useState([]);
-  const [you, setYou] = React.useState('You');
-  const [variant, setVariant] = React.useState(TWEAK_DEFAULTS.friendCard || 'hinge');
+import { useEffect, useState } from 'react';
 
-  React.useEffect(() => { localStorage.setItem('mesa.route', route); window.scrollTo({ top: 0 }); }, [route]);
+import Auth from './auth';
+import { UNIVERSITIES } from './data';
+import Friends from './friends';
+import Landing from './landing';
+import Posts from './posts';
+import Quiz from './quiz';
+import Results from './results';
+import Selection from './selection';
 
-  const onNav = (r) => setRoute(r);
-  window.__goto = onNav;
+export default function MesaApp() {
+  const [route, setRoute] = useState('landing');
+  const [answers, setAnswers] = useState({});
+  const [saved, setSaved] = useState([]);
+  const [selected, setSelected] = useState([]);
+  const [savedFriends, setSavedFriends] = useState([]);
+  const [variant, setVariant] = useState('hinge');
+  const [routeLoaded, setRouteLoaded] = useState(false);
 
-  const toggleSave = (id) => setSaved(saved.includes(id) ? saved.filter(x=>x!==id) : [...saved, id]);
-  const toggleSelect = (id) => setSelected(selected.includes(id) ? selected.filter(x=>x!==id) : [...selected, id].slice(0,3));
-  const toggleSaveFriend = (id) => setSavedFriends(savedFriends.includes(id) ? savedFriends.filter(x=>x!==id) : [...savedFriends, id]);
+  useEffect(() => {
+    const savedRoute = window.localStorage.getItem('mesa.route');
+    if (savedRoute) {
+      setRoute(savedRoute);
+    }
+    setRouteLoaded(true);
+  }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    if (!routeLoaded) {
+      return;
+    }
+
+    window.localStorage.setItem('mesa.route', route);
+    window.scrollTo({ top: 0 });
+  }, [route, routeLoaded]);
+
+  useEffect(() => {
     if (route === 'friends' && selected.length === 0) {
       setSelected([UNIVERSITIES[0].id, UNIVERSITIES[1].id]);
     }
-  }, [route]);
+  }, [route, selected.length]);
 
-  React.useEffect(() => {
-    const onMsg = (ev) => {
-      const d = ev.data || {};
-      if (d.type === '__activate_edit_mode') document.getElementById('tweaks').classList.add('show');
-      if (d.type === '__deactivate_edit_mode') document.getElementById('tweaks').classList.remove('show');
-    };
-    window.addEventListener('message', onMsg);
-    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-    return () => window.removeEventListener('message', onMsg);
-  }, []);
-
-  React.useEffect(() => {
-    const root = document.getElementById('tweak-card');
-    if (!root) return;
-    const handler = (e) => {
-      const b = e.target.closest('button[data-val]');
-      if (!b) return;
-      const val = b.dataset.val;
-      root.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
-      setVariant(val);
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { friendCard: val } }, '*');
-    };
-    root.addEventListener('click', handler);
-    const x = document.getElementById('tweaks-x');
-    const xh = () => document.getElementById('tweaks').classList.remove('show');
-    x && x.addEventListener('click', xh);
-    document.querySelectorAll('#tweak-card button').forEach(b => b.classList.toggle('on', b.dataset.val === variant));
-    return () => { root.removeEventListener('click', handler); x && x.removeEventListener('click', xh); };
-  }, []);
-
-  const pages = {
-    landing: <Landing onNav={onNav}/>,
-    auth: <Auth onNav={onNav} onLogin={setYou} />,
-    quiz: <Quiz onNav={onNav} answers={answers} setAnswers={setAnswers} />,
-    results: <Results onNav={onNav} saved={saved} toggleSave={toggleSave} />,
-    selection: <Selection onNav={onNav} selected={selected} toggleSelect={toggleSelect}/>,
-    friends: <Friends onNav={onNav} selected={selected} variant={variant} setVariant={setVariant}
-                      savedFriends={savedFriends} toggleSaveFriend={toggleSaveFriend} />,
-    posts: <Posts onNav={onNav}/>,
+  const toggleSave = (id) => {
+    setSaved((current) =>
+      current.includes(id) ? current.filter((value) => value !== id) : [...current, id],
+    );
   };
 
-  return pages[route] || pages.landing;
-}
+  const toggleSelect = (id) => {
+    setSelected((current) =>
+      current.includes(id)
+        ? current.filter((value) => value !== id)
+        : [...current, id].slice(0, 3),
+    );
+  };
 
-ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
+  const toggleSaveFriend = (id) => {
+    setSavedFriends((current) =>
+      current.includes(id) ? current.filter((value) => value !== id) : [...current, id],
+    );
+  };
+
+  switch (route) {
+    case 'auth':
+      return <Auth onNav={setRoute} onLogin={() => setRoute('quiz')} />;
+    case 'quiz':
+      return <Quiz onNav={setRoute} answers={answers} setAnswers={setAnswers} />;
+    case 'results':
+      return <Results onNav={setRoute} saved={saved} toggleSave={toggleSave} />;
+    case 'selection':
+      return <Selection onNav={setRoute} selected={selected} toggleSelect={toggleSelect} />;
+    case 'friends':
+      return (
+        <Friends
+          onNav={setRoute}
+          selected={selected}
+          variant={variant}
+          setVariant={setVariant}
+          savedFriends={savedFriends}
+          toggleSaveFriend={toggleSaveFriend}
+        />
+      );
+    case 'posts':
+      return <Posts onNav={setRoute} />;
+    default:
+      return <Landing onNav={setRoute} />;
+  }
+}

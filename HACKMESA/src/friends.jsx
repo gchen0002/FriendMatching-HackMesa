@@ -1,5 +1,10 @@
-function Friends({ onNav, selected, variant, setVariant, savedFriends, toggleSaveFriend }) {
-  const [idx, setIdx] = React.useState(0);
+import { useState } from 'react';
+
+import { FRIENDS, UNIVERSITIES } from './data';
+import { Icon, MonoAvatar, Nav, Placeholder } from './shared';
+
+export default function Friends({ onNav, selected, variant, setVariant, savedFriends, toggleSaveFriend }) {
+  const [idx, setIdx] = useState(0);
   const list = FRIENDS;
   const p = list[idx];
   const next = (action) => {
@@ -165,5 +170,3 @@ function Friends({ onNav, selected, variant, setVariant, savedFriends, toggleSav
     </div>
   );
 }
-
-window.Friends = Friends;

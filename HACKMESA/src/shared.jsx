@@ -1,6 +1,4 @@
-const { useState, useEffect, useRef, useMemo } = React;
-
-function MonoAvatar({ initials, size = 40, tone }) {
+export function MonoAvatar({ initials, size = 40 }) {
   return (
     <span className="mono-avatar" style={{
       width: size, height: size, borderRadius: 0,
@@ -9,7 +7,7 @@ function MonoAvatar({ initials, size = 40, tone }) {
   );
 }
 
-function Placeholder({ label, height = 160, tone }) {
+export function Placeholder({ label, height = 160 }) {
   return (
     <div className="ph" style={{ height }}>
       {label && <span>{label}</span>}
@@ -17,16 +15,16 @@ function Placeholder({ label, height = 160, tone }) {
   );
 }
 
-function Logo({ small }) {
+export function Logo({ onNav, small }) {
   return (
-    <a href="#" className="brand" onClick={(e)=>{ e.preventDefault(); window.__goto && window.__goto('landing'); }}>
+    <a href="#" className="brand" onClick={(e)=>{ e.preventDefault(); onNav('landing'); }}>
       <span className="brand-mark">mesa<em>.</em></span>
       {!small && <span className="brand-sub">college and people, matched</span>}
     </a>
   );
 }
 
-function Nav({ route, onNav, showLogin }) {
+export function Nav({ route, onNav, showLogin }) {
   const items = [
     { id: 'landing', label: 'Home' },
     { id: 'quiz', label: 'Quiz' },
@@ -36,7 +34,7 @@ function Nav({ route, onNav, showLogin }) {
   ];
   return (
     <div className="nav">
-      <Logo />
+      <Logo onNav={onNav} />
       <div className="nav-links">
         {items.map(i => (
           <a key={i.id} href="#" onClick={(e)=>{e.preventDefault(); onNav(i.id);}}
@@ -62,7 +60,7 @@ function Nav({ route, onNav, showLogin }) {
   );
 }
 
-const Icon = {
+export const Icon = {
   heart: (p) => (
     <svg width={p.size||18} height={p.size||18} viewBox="0 0 24 24" fill={p.fill||'none'} stroke="currentColor" strokeWidth="1.5">
       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -104,5 +102,3 @@ const Icon = {
     </svg>
   ),
 };
-
-Object.assign(window, { MonoAvatar, Placeholder, Logo, Nav, Icon });

@@ -1,4 +1,9 @@
-function Quiz({ onNav, answers, setAnswers }) {
+import { useState } from 'react';
+
+import { QUIZ } from './data';
+import { Icon, Nav } from './shared';
+
+export default function Quiz({ onNav, answers, setAnswers }) {
   const [i, setI] = useState(0);
   const [slideKey, setSlideKey] = useState(0);
   const q = QUIZ[i];
@@ -54,5 +59,3 @@ function Quiz({ onNav, answers, setAnswers }) {
     </div>
   );
 }
-
-window.Quiz = Quiz;

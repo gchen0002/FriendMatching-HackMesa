@@ -1,9 +1,14 @@
-function Posts({ onNav }) {
-  const [posts, setPosts] = React.useState(POSTS);
-  const [title, setTitle] = React.useState('');
-  const [body, setBody] = React.useState('');
-  const [school, setSchool] = React.useState('Pomona');
-  const [tags, setTags] = React.useState(['no-pressure']);
+import { useState } from 'react';
+
+import { POSTS } from './data';
+import { Icon, MonoAvatar, Nav } from './shared';
+
+export default function Posts({ onNav }) {
+  const [posts, setPosts] = useState(POSTS);
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+  const [school, setSchool] = useState('Pomona');
+  const [tags, setTags] = useState(['no-pressure']);
   const tagPool = ['hiking','study group','premed','music','gaming','coffee','mornings','no-pressure','creative','sports','roommate'];
 
   const toggleTag = (t) => setTags(tags.includes(t) ? tags.filter(x => x !== t) : [...tags, t].slice(0,4));
@@ -93,5 +98,3 @@ function Posts({ onNav }) {
     </div>
   );
 }
-
-window.Posts = Posts;
