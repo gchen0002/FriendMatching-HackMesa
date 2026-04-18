@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export function MonoAvatar({ initials, size = 40 }) {
+export function MonoAvatar({ initials, size = 40, emoji = null }) {
   return (
     <span className="mono-avatar" style={{
       width: size, height: size, borderRadius: 0,
-      fontSize: size*0.36, background: '#F6F6F6', color: '#000'
-    }}>{initials}</span>
+      fontSize: emoji ? size * 0.5 : size * 0.36,
+      background: '#F6F6F6', color: '#000',
+      display: 'inline-flex', alignItems: 'center', justifyContent: 'center'
+    }}>{emoji || initials}</span>
   );
 }
 
@@ -82,7 +84,7 @@ export function Nav({ route, onNav, showLogin = false }) {
         ) : (
           <>
             <span className="mono-tag" style={{ marginRight: 10 }}>demo mode</span>
-            <MonoAvatar initials="YOU" size={36} />
+            <MonoAvatar initials="YOU" emoji="🧑" size={36} />
           </>
         )}
       </div>

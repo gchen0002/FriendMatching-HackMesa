@@ -3,6 +3,14 @@ import { useState } from 'react';
 import { FRIENDS } from './data';
 import { Icon, MonoAvatar, Nav, Placeholder } from './shared';
 
+function DemoHeroAvatar({ emoji, label }) {
+  return (
+    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <MonoAvatar initials={label.slice(0, 2).toUpperCase()} emoji={emoji} size={110} />
+    </div>
+  );
+}
+
 export default function Friends({ onNav, selected, colleges, variant, setVariant, savedFriends, toggleSaveFriend }) {
   const [idx, setIdx] = useState(0);
   const list = FRIENDS;
@@ -50,7 +58,7 @@ export default function Friends({ onNav, selected, colleges, variant, setVariant
     if (variant === 'polaroid') {
       return (
         <div className={'friend-card v-polaroid'} key={p.id}>
-          <div className="hero-img"><Placeholder label={p.name.toLowerCase()}/></div>
+          <div className="hero-img"><DemoHeroAvatar emoji={p.avatarEmoji || '🤖'} label={p.name} /></div>
           <div className="pola-head">
             <h2>{p.name}, {p.age}</h2>
             <div className="m">{p.school} · {p.origin}</div>
@@ -62,7 +70,7 @@ export default function Friends({ onNav, selected, colleges, variant, setVariant
     if (variant === 'structured') {
       return (
         <div className={'friend-card v-structured'} key={p.id}>
-          <div className="hero-img"><Placeholder label={p.name.toLowerCase()}/></div>
+          <div className="hero-img"><DemoHeroAvatar emoji={p.avatarEmoji || '🤖'} label={p.name} /></div>
           <div className="stat-head">
             <h2>{p.name}, {p.age}</h2>
             <div className="m">{p.school}</div>
@@ -80,7 +88,7 @@ export default function Friends({ onNav, selected, colleges, variant, setVariant
     return (
       <div className="friend-card" key={p.id}>
         <div className="hero-img">
-          <Placeholder label={p.name.toLowerCase()}/>
+          <DemoHeroAvatar emoji={p.avatarEmoji || '🤖'} label={p.name} />
           <span className="pill">{p.school.replace(' (committed)','').replace(' (interested)','')}</span>
           <span className="match">{p.compat}% match</span>
           <div className="overlay">
@@ -145,7 +153,7 @@ export default function Friends({ onNav, selected, colleges, variant, setVariant
               {savedFriends.length === 0 && <span style={{ fontSize: 12, color: 'var(--mute)' }}>Tap save to keep people here.</span>}
               {savedFriends.map(id => {
                 const fr = FRIENDS.find(x => x.id === id);
-                return fr ? <MonoAvatar key={id} initials={fr.initials} size={36} /> : null;
+                return fr ? <MonoAvatar key={id} initials={fr.initials} emoji={fr.avatarEmoji} size={36} /> : null;
               })}
             </div>
           </div>

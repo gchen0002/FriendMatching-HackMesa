@@ -34,7 +34,7 @@ export default function Profile({ onNav, profileId, savedFriends, toggleSaveFrie
           <div className="profile-main">
             <div className="profile-hero">
               <div className="profile-avatar-wrap">
-                <MonoAvatar initials={person.initials} size={120} />
+                <MonoAvatar initials={person.initials} emoji={person.avatarEmoji} size={120} />
                 <div className="profile-compat-badge">
                   <span className="profile-compat-num">{person.compat}</span>
                   <span className="profile-compat-pct">%</span>

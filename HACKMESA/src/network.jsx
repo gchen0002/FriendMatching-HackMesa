@@ -46,7 +46,7 @@ export default function Network({ onNav, savedFriends, toggleSaveFriend, onViewP
           <div className="f-block">
             <span className="mono-tag">Account</span>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 12 }}>
-              <MonoAvatar initials="YOU" size={40} />
+              <MonoAvatar initials="YOU" emoji="🧑" size={40} />
               <div>
                 <div style={{ fontWeight: 500, fontSize: 14 }}>Your Profile</div>
                 <div style={{ fontSize: 12, color: 'var(--ink-2)' }}>View &amp; edit</div>
@@ -60,7 +60,7 @@ export default function Network({ onNav, savedFriends, toggleSaveFriend, onViewP
               {savedFriends.length === 0 && <span style={{ fontSize: 12, color: 'var(--mute)' }}>No saved people yet.</span>}
               {savedFriends.map((id) => {
                 const fr = FRIENDS.find((x) => x.id === id);
-                return fr ? <MonoAvatar key={id} initials={fr.initials} size={36} /> : null;
+                return fr ? <MonoAvatar key={id} initials={fr.initials} emoji={fr.avatarEmoji} size={36} /> : null;
               })}
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Network({ onNav, savedFriends, toggleSaveFriend, onViewP
                 onClick={() => onViewProfile(p.id)}
               >
                 <div className="network-card-avatar">
-                  <MonoAvatar initials={p.initials} size={72} />
+                  <MonoAvatar initials={p.initials} emoji={p.avatarEmoji} size={72} />
                   <span className="network-card-compat">{p.compat}%</span>
                 </div>
                 <div className="network-card-info">

@@ -54,6 +54,8 @@ export type FriendCard = {
   name: string;
   age: number;
   initials: string;
+  avatarEmoji?: string;
+  isDemo?: boolean;
   school: string;
   origin: string;
   bio: string;
@@ -69,6 +71,7 @@ export type PostItem = {
   id: string;
   author: string;
   initials: string;
+  avatarEmoji?: string;
   school: string;
   title: string;
   body: string;

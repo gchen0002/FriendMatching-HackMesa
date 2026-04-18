@@ -17,7 +17,7 @@ export default function Posts({ onNav }) {
     e.preventDefault();
     if (!title.trim()) return;
     const post = {
-      id: 'new-' + Date.now(), author: 'You', initials: 'YO', school,
+      id: 'new-' + Date.now(), author: 'You', initials: 'YO', avatarEmoji: '🧑', school,
       title, body: body || '(no description)', tags, when: 'just now', saves: 0, replies: 0
     };
     setPosts([post, ...posts]);
@@ -72,7 +72,7 @@ export default function Posts({ onNav }) {
           <div className="post-list">
             {posts.map(p => (
               <div key={p.id} className="post">
-                <MonoAvatar initials={p.initials} size={48} />
+                <MonoAvatar initials={p.initials} emoji={p.avatarEmoji} size={48} />
                 <div className="body">
                   <h4>{p.title}</h4>
                   <p>{p.body}</p>
