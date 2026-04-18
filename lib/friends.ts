@@ -1,5 +1,5 @@
 import { ensureUserProfile, getSql, getUserState } from '@/lib/neon';
-import type { FriendActionType, FriendCard, FriendFeedResult, MatchProfile, MatchProfileDraft, QuizAnswers } from '@/lib/types';
+import type { FriendActionType, FriendCard, FriendFeedResult, MatchProfile, MatchProfileDraft, QuizAnswers, SocialLink, SocialPlatform, SocialVisibility } from '@/lib/types';
 
 type MatchProfileRow = {
   id: string;
@@ -13,6 +13,7 @@ type MatchProfileRow = {
   avatar_url: string | null;
   avatar_emoji: string | null;
   cover_image_url: string | null;
+  social_links_json: unknown;
   is_demo: boolean;
   demo_label: 'Demo' | 'AI' | null;
   profile_status: 'active' | 'paused' | 'hidden';
@@ -59,6 +60,12 @@ type MatchProfileBundle = {
 };
 
 const FEED_TARGET_SIZE = 8;
+const SOCIAL_BASE_URLS: Record<SocialPlatform, string> = {
+  instagram: 'https://instagram.com/',
+  linkedin: 'https://www.linkedin.com/in/',
+  tiktok: 'https://www.tiktok.com/@',
+  x: 'https://x.com/',
+};
 
 function normalizeStringArray(value: unknown) {
   if (!Array.isArray(value)) {
@@ -79,6 +86,86 @@ function normalizeQuizAnswers(value: unknown): QuizAnswers {
 
 function dedupeStrings(values: string[]) {
   return [...new Set(values.map((value) => value.trim()).filter(Boolean))];
+}
+
+function normalizeHandle(platform: SocialPlatform, value: string) {
+  const trimmed = value.trim();
+
+  if (!trimmed) {
+    return '';
+  }
+
+  if (platform === 'linkedin') {
+    return trimmed.replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//i, '').replace(/^linkedin\.com\/in\//i, '').replace(/^@/, '').replace(/\/+$/, '');
+  }
+
+  if (platform === 'tiktok') {
+    return trimmed.replace(/^https?:\/\/(www\.)?tiktok\.com\/@/i, '').replace(/^tiktok\.com\/@/i, '').replace(/^@/, '').replace(/\/+$/, '');
+  }
+
+  if (platform === 'instagram') {
+    return trimmed.replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/^instagram\.com\//i, '').replace(/^@/, '').replace(/\/+$/, '');
+  }
+
+  return trimmed.replace(/^https?:\/\/(www\.)?x\.com\//i, '').replace(/^x\.com\//i, '').replace(/^https?:\/\/(www\.)?twitter\.com\//i, '').replace(/^twitter\.com\//i, '').replace(/^@/, '').replace(/\/+$/, '');
+}
+
+function normalizeSocialLinks(value: unknown): SocialLink[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const items = value.flatMap((item) => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) {
+      return [];
+    }
+
+    const candidate = item as Record<string, unknown>;
+    const platform = typeof candidate.platform === 'string' ? candidate.platform as SocialPlatform : null;
+    const visibility = typeof candidate.visibility === 'string' ? candidate.visibility as SocialVisibility : 'public';
+    const rawHandle = typeof candidate.handle === 'string' ? candidate.handle : '';
+
+    if (!platform || !(platform in SOCIAL_BASE_URLS)) {
+      return [];
+    }
+
+    const handle = normalizeHandle(platform, rawHandle);
+
+    if (!handle) {
+      return [];
+    }
+
+    const safeVisibility: SocialVisibility = visibility === 'saved_only' || visibility === 'private' ? visibility : 'public';
+
+    return [{
+      platform,
+      handle,
+      visibility: safeVisibility,
+      url: `${SOCIAL_BASE_URLS[platform]}${handle}`,
+    }];
+  });
+
+  const byPlatform = new Map<SocialPlatform, SocialLink>();
+
+  for (const item of items) {
+    byPlatform.set(item.platform, item);
+  }
+
+  return Array.from(byPlatform.values());
+}
+
+function getVisibleSocialLinks(socialLinks: SocialLink[], isSavedByViewer: boolean) {
+  return socialLinks.filter((link) => {
+    if (link.visibility === 'private') {
+      return false;
+    }
+
+    if (link.visibility === 'saved_only') {
+      return isSavedByViewer;
+    }
+
+    return true;
+  });
 }
 
 function buildInitials(name: string) {
@@ -162,6 +249,7 @@ async function getMatchProfileRowByClerkUserId(clerkUserId: string) {
         avatar_url,
         avatar_emoji,
         cover_image_url,
+        social_links_json,
         is_demo,
         demo_label,
         profile_status
@@ -222,6 +310,7 @@ async function getMatchProfileBundlesByIds(profileIds: string[], includeQuizAnsw
         avatar_url,
         avatar_emoji,
         cover_image_url,
+        social_links_json,
         is_demo,
         demo_label,
         profile_status
@@ -311,6 +400,7 @@ async function getMatchProfileBundlesByIds(profileIds: string[], includeQuizAnsw
           avatarUrl: row.avatar_url,
           avatarEmoji: row.avatar_emoji,
           coverImageUrl: row.cover_image_url,
+          socialLinks: normalizeSocialLinks(row.social_links_json),
           isDemo: row.is_demo,
           demoLabel: row.demo_label,
           profileStatus: row.profile_status,
@@ -384,6 +474,7 @@ async function getMatchProfileBundleFromRow(row: MatchProfileRow): Promise<Match
       avatarUrl: row.avatar_url,
       avatarEmoji: row.avatar_emoji,
       coverImageUrl: row.cover_image_url,
+      socialLinks: normalizeSocialLinks(row.social_links_json),
       isDemo: row.is_demo,
       demoLabel: row.demo_label,
       profileStatus: row.profile_status,
@@ -406,6 +497,7 @@ function buildDraftFromBundle(bundle: MatchProfileBundle): MatchProfileDraft {
     avatarUrl: bundle.profile.avatarUrl || null,
     coverImageUrl: bundle.profile.coverImageUrl || null,
     profileStatus: bundle.profile.profileStatus === 'paused' ? 'paused' : 'active',
+    socialLinks: bundle.profile.socialLinks,
     interests: bundle.profile.interests,
     goals: bundle.profile.goals,
     selectedSchoolIds: bundle.profile.selectedSchoolIds,
@@ -435,6 +527,7 @@ export async function getCurrentMatchProfileDraft(clerkUserId: string, fallbackD
       avatarUrl: null,
       coverImageUrl: null,
       profileStatus: 'active',
+      socialLinks: [],
       interests: [],
       goals: [],
       selectedSchoolIds: userState.selectedSchoolIds,
@@ -568,7 +661,7 @@ async function getActionTargetIds(viewerProfileId: string, actionTypes: FriendAc
   return rows.map((row) => row.target_profile_id);
 }
 
-function buildFriendCard(candidateBundle: MatchProfileBundle, score: number, sharedColleges: string[], sharedSignals: string[]): FriendCard {
+function buildFriendCard(candidateBundle: MatchProfileBundle, score: number, sharedColleges: string[], sharedSignals: string[], isSavedByViewer = false): FriendCard {
   const selectedSchools = candidateBundle.profile.selectedSchools;
 
   return {
@@ -591,6 +684,7 @@ function buildFriendCard(candidateBundle: MatchProfileBundle, score: number, sha
     shared: dedupeStrings([...sharedColleges, ...sharedSignals.map(humanizeSharedSignal)]).slice(0, 4),
     reason: buildWhyMatch(sharedColleges, sharedSignals, Boolean(candidateBundle.profile.isDemo)),
     selectedSchools,
+    socialLinks: getVisibleSocialLinks(candidateBundle.profile.socialLinks, isSavedByViewer),
     tone: candidateBundle.profile.demoLabel === 'AI' ? 'sand' : 'sage',
   };
 }
@@ -611,6 +705,7 @@ async function appendDemoBackfillItems(viewerBundle: MatchProfileBundle, viewerP
         avatar_url,
         avatar_emoji,
         cover_image_url,
+        social_links_json,
         is_demo,
         demo_label,
         profile_status
@@ -662,7 +757,7 @@ async function appendDemoBackfillItems(viewerBundle: MatchProfileBundle, viewerP
 
   return scored.slice(0, Math.max(0, FEED_TARGET_SIZE - existingIds.size)).map((item) => {
     existingIds.add(item.candidateBundle.profile.id);
-    return buildFriendCard(item.candidateBundle, item.score, item.sharedColleges, item.sharedSignals);
+    return buildFriendCard(item.candidateBundle, item.score, item.sharedColleges, item.sharedSignals, false);
   });
 }
 
@@ -703,6 +798,7 @@ export async function recomputeCompatibilityForClerkUser(clerkUserId: string) {
         avatar_url,
         avatar_emoji,
         cover_image_url,
+        social_links_json,
         is_demo,
         demo_label,
         profile_status
@@ -760,11 +856,12 @@ export async function upsertCurrentMatchProfile(
         avatar_type,
         avatar_url,
         cover_image_url,
+        social_links_json,
         is_demo,
         profile_status,
         updated_at
       )
-      values ($1, $2, $3, $4, $5, $6, $7, $8, $9, false, $10, now())
+      values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10::jsonb, false, $11, now())
       on conflict (clerk_user_id) do update
       set display_name = excluded.display_name,
           graduation_year = excluded.graduation_year,
@@ -774,6 +871,7 @@ export async function upsertCurrentMatchProfile(
           avatar_type = excluded.avatar_type,
           avatar_url = excluded.avatar_url,
           cover_image_url = excluded.cover_image_url,
+          social_links_json = excluded.social_links_json,
           profile_status = excluded.profile_status,
           updated_at = now()
       returning id
@@ -788,6 +886,7 @@ export async function upsertCurrentMatchProfile(
       avatarType,
       input.avatarUrl || null,
       input.coverImageUrl || null,
+      JSON.stringify(normalizeSocialLinks(input.socialLinks)),
       input.profileStatus,
     ],
   )) as Array<{ id: string }>;
@@ -881,7 +980,7 @@ export async function getFriendFeedForClerkUser(clerkUserId: string): Promise<Fr
 
     const sharedColleges = normalizeStringArray(edgeRow.shared_colleges_json);
     const sharedSignals = normalizeStringArray(edgeRow.shared_signals_json);
-    items.push(buildFriendCard(candidateBundle, edgeRow.score, sharedColleges, sharedSignals));
+    items.push(buildFriendCard(candidateBundle, edgeRow.score, sharedColleges, sharedSignals, savedProfileIds.includes(edgeRow.candidate_profile_id)));
     existingIds.add(edgeRow.candidate_profile_id);
 
     if (items.length >= FEED_TARGET_SIZE) {

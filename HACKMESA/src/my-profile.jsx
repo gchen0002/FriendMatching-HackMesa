@@ -6,6 +6,27 @@ import { Icon, MonoAvatar, Nav } from './shared';
 const INTEREST_OPTIONS = ['creative writing', 'film photography', 'music', 'running', 'hiking', 'gaming', 'cooking', 'museums', 'soccer', 'podcasts', 'research', 'coffee shops'];
 const GOAL_OPTIONS = ['find a study partner', 'make a close friend group', 'join a campus org', 'find weekend plans', 'build a creative crew', 'meet future roommates'];
 const STATE_OPTIONS = (QUIZ.find((question) => question.id === 'q9')?.options || []).filter((option) => option.key !== 'Any');
+const SOCIAL_PLATFORM_OPTIONS = [
+  { platform: 'instagram', label: 'Instagram', placeholder: '@yourhandle' },
+  { platform: 'linkedin', label: 'LinkedIn', placeholder: 'your-name' },
+  { platform: 'tiktok', label: 'TikTok', placeholder: '@yourhandle' },
+  { platform: 'x', label: 'X', placeholder: '@yourhandle' },
+];
+
+function withSocialDefaults(profile = {}) {
+  const currentLinks = Array.isArray(profile.socialLinks) ? profile.socialLinks : [];
+
+  return SOCIAL_PLATFORM_OPTIONS.map(({ platform }) => {
+    const existing = currentLinks.find((item) => item.platform === platform);
+
+    return {
+      platform,
+      handle: existing?.handle || '',
+      visibility: existing?.visibility || 'public',
+      url: existing?.url || '',
+    };
+  });
+}
 
 function createEmptyProfile(selectedSchoolIds) {
   return {
@@ -17,6 +38,7 @@ function createEmptyProfile(selectedSchoolIds) {
     avatarUrl: null,
     coverImageUrl: null,
     profileStatus: 'active',
+    socialLinks: withSocialDefaults(),
     interests: [],
     goals: [],
     selectedSchoolIds,
@@ -93,7 +115,7 @@ export default function MyProfile({ onNav, isDemoMode, selected, colleges, match
 
         setHasMatchProfile(Boolean(data.exists));
         setMatchProfile(data.profile);
-        setProfileForm(data.profile || createEmptyProfile(selected));
+        setProfileForm(data.profile ? { ...data.profile, socialLinks: withSocialDefaults(data.profile) } : createEmptyProfile(selected));
       } catch (fetchError) {
         if (!cancelled) {
           console.error('Failed to load friend profile', fetchError);
@@ -119,7 +141,7 @@ export default function MyProfile({ onNav, isDemoMode, selected, colleges, match
     }
 
     if (matchProfile) {
-      setProfileForm({ ...matchProfile, selectedSchoolIds: selected });
+      setProfileForm({ ...matchProfile, selectedSchoolIds: selected, socialLinks: withSocialDefaults(matchProfile) });
       return;
     }
 
@@ -162,6 +184,15 @@ export default function MyProfile({ onNav, isDemoMode, selected, colleges, match
 
       return { ...current, [field]: values };
     });
+  };
+
+  const updateSocialLink = (platform, field, value) => {
+    setProfileForm((current) => ({
+      ...current,
+      socialLinks: current.socialLinks.map((link) => (
+        link.platform === platform ? { ...link, [field]: value } : link
+      )),
+    }));
   };
 
   const saveProfile = async (event) => {
@@ -315,6 +346,33 @@ export default function MyProfile({ onNav, isDemoMode, selected, colleges, match
                       <option value="">Select a state...</option>
                       {STATE_OPTIONS.map((option) => <option key={option.key} value={option.key}>{option.label}</option>)}
                     </select>
+                  </div>
+                </div>
+
+                <div className="profile-editor-section">
+                  <label className="profile-editor-label">Social links</label>
+                  <div className="profile-social-grid">
+                    {SOCIAL_PLATFORM_OPTIONS.map(({ platform, label, placeholder }) => {
+                      const socialLink = profileForm.socialLinks.find((item) => item.platform === platform) || { handle: '', visibility: 'public' };
+
+                      return (
+                        <div key={platform} className="profile-social-card">
+                          <div className="profile-social-top">
+                            <span className="profile-social-name">{label}</span>
+                            <select value={socialLink.visibility} onChange={(event) => updateSocialLink(platform, 'visibility', event.target.value)}>
+                              <option value="public">Public</option>
+                              <option value="saved_only">Friends only</option>
+                              <option value="private">Private</option>
+                            </select>
+                          </div>
+                          <input
+                            value={socialLink.handle}
+                            onChange={(event) => updateSocialLink(platform, 'handle', event.target.value)}
+                            placeholder={placeholder}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 

@@ -172,4 +172,26 @@ export const Icon = {
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
   ),
+  instagram: (p) => (
+    <svg width={p.size||16} height={p.size||16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  linkedin: (p) => (
+    <svg width={p.size||16} height={p.size||16} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M6.94 8.5H3.56V20h3.38V8.5Zm-1.7-1.54c1.08 0 1.76-.72 1.76-1.62C7 4.42 6.32 3.7 5.26 3.7 4.2 3.7 3.5 4.42 3.5 5.34c0 .9.68 1.62 1.72 1.62h.02ZM20.5 20h-3.38v-6.05c0-1.52-.54-2.56-1.9-2.56-1.03 0-1.64.7-1.9 1.38-.1.24-.12.58-.12.92V20H9.82s.04-10.42 0-11.5h3.38v1.63c.45-.69 1.26-1.67 3.07-1.67 2.24 0 3.93 1.46 3.93 4.61V20Z" />
+    </svg>
+  ),
+  tiktok: (p) => (
+    <svg width={p.size||16} height={p.size||16} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14.5 3c.32 1.78 1.39 3.18 3.1 3.95.8.36 1.63.54 2.4.55v3.07c-1.48-.04-2.9-.43-4.12-1.12v5.88c0 3.45-2.46 5.67-5.59 5.67-3.26 0-5.29-2.49-5.29-5.1 0-3.17 2.48-5.45 5.6-5.45.33 0 .62.03.9.08v3.18a2.6 2.6 0 0 0-.88-.14c-1.5 0-2.72 1-2.72 2.46 0 1.3 1.01 2.38 2.41 2.38 1.52 0 2.6-.99 2.6-2.98V3h3.59Z" />
+    </svg>
+  ),
+  xLogo: (p) => (
+    <svg width={p.size||16} height={p.size||16} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.9 3H21l-6.86 7.84L22 21h-6.2l-4.86-6.35L5.4 21H3.3l7.34-8.39L2 3h6.35l4.39 5.8L18.9 3Zm-1.09 16.14h1.16L7.72 4.8H6.48l11.33 14.34Z" />
+    </svg>
+  ),
 };

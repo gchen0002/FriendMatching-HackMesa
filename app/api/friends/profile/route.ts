@@ -3,7 +3,10 @@ import { NextResponse } from 'next/server';
 import { auth, currentUser } from '@clerk/nextjs/server';
 
 import { getCurrentMatchProfileDraft, upsertCurrentMatchProfile } from '@/lib/friends';
-import type { MatchProfileDraft } from '@/lib/types';
+import type { MatchProfileDraft, SocialLink, SocialPlatform, SocialVisibility } from '@/lib/types';
+
+const SOCIAL_PLATFORMS = new Set<SocialPlatform>(['instagram', 'linkedin', 'tiktok', 'x']);
+const SOCIAL_VISIBILITY = new Set<SocialVisibility>(['public', 'saved_only', 'private']);
 
 function normalizeImageValue(value: unknown) {
   if (typeof value !== 'string') {
@@ -25,6 +28,36 @@ function normalizeImageValue(value: unknown) {
   return trimmed;
 }
 
+function normalizeSocialLinks(value: unknown) {
+  if (!Array.isArray(value)) {
+    return [] as SocialLink[];
+  }
+
+  const normalized = value.flatMap((item) => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) {
+      return [];
+    }
+
+    const candidate = item as Record<string, unknown>;
+    const platform = typeof candidate.platform === 'string' && SOCIAL_PLATFORMS.has(candidate.platform as SocialPlatform)
+      ? candidate.platform as SocialPlatform
+      : null;
+    const visibility = typeof candidate.visibility === 'string' && SOCIAL_VISIBILITY.has(candidate.visibility as SocialVisibility)
+      ? candidate.visibility as SocialVisibility
+      : 'public';
+    const handle = typeof candidate.handle === 'string' ? candidate.handle.trim() : '';
+    const url = typeof candidate.url === 'string' ? candidate.url.trim() : '';
+
+    if (!platform || !handle || !url) {
+      return [];
+    }
+
+    return [{ platform, handle, visibility, url }];
+  });
+
+  return normalized.slice(0, 8);
+}
+
 function parseDraft(value: unknown): MatchProfileDraft | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
     return null;
@@ -42,6 +75,7 @@ function parseDraft(value: unknown): MatchProfileDraft | null {
   const homeState = typeof candidate.homeState === 'string' ? candidate.homeState.trim() : '';
   const avatarUrl = normalizeImageValue(candidate.avatarUrl);
   const coverImageUrl = normalizeImageValue(candidate.coverImageUrl);
+  const socialLinks = normalizeSocialLinks(candidate.socialLinks);
   const profileStatus = candidate.profileStatus === 'paused' ? 'paused' : 'active';
   const interests = Array.isArray(candidate.interests)
     ? candidate.interests.filter((item): item is string => typeof item === 'string')
@@ -66,6 +100,7 @@ function parseDraft(value: unknown): MatchProfileDraft | null {
     avatarUrl,
     coverImageUrl,
     profileStatus,
+    socialLinks,
     interests: interests.slice(0, 5),
     goals: goals.slice(0, 3),
     selectedSchoolIds: selectedSchoolIds.slice(0, 3),

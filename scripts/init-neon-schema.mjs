@@ -127,6 +127,7 @@ create table if not exists match_profiles (
   avatar_url text,
   avatar_emoji text,
   cover_image_url text,
+  social_links_json jsonb not null default '[]'::jsonb,
   is_demo boolean not null default false,
   demo_label text,
   profile_status text not null default 'active',
@@ -142,6 +143,9 @@ alter table if exists match_profiles
 
 alter table if exists match_profiles
   add column if not exists cover_image_url text;
+
+alter table if exists match_profiles
+  add column if not exists social_links_json jsonb not null default '[]'::jsonb;
 
 create table if not exists match_profile_interests (
   profile_id uuid not null references match_profiles(id) on delete cascade,

@@ -75,7 +75,19 @@ export type FriendCard = {
   shared: string[];
   reason: string;
   selectedSchools?: string[];
+  socialLinks?: SocialLink[];
   tone: 'sage' | 'sand' | 'clay';
+};
+
+export type SocialPlatform = 'instagram' | 'linkedin' | 'tiktok' | 'x';
+
+export type SocialVisibility = 'public' | 'saved_only' | 'private';
+
+export type SocialLink = {
+  platform: SocialPlatform;
+  handle: string;
+  visibility: SocialVisibility;
+  url: string;
 };
 
 export type FriendFeedResult = {
@@ -113,6 +125,7 @@ export type MatchProfile = {
   isDemo: boolean;
   demoLabel?: 'Demo' | 'AI' | null;
   profileStatus: 'active' | 'paused' | 'hidden';
+  socialLinks: SocialLink[];
   interests: string[];
   goals: string[];
   selectedSchoolIds: string[];
@@ -128,6 +141,7 @@ export type MatchProfileDraft = {
   avatarUrl?: string | null;
   coverImageUrl?: string | null;
   profileStatus: 'active' | 'paused';
+  socialLinks: SocialLink[];
   interests: string[];
   goals: string[];
   selectedSchoolIds: string[];

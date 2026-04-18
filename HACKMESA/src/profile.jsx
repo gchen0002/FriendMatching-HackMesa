@@ -19,6 +19,13 @@ function getPrimaryMeta(person) {
   return 'Mesa profile';
 }
 
+function getSocialIcon(platform) {
+  if (platform === 'instagram') return <Icon.instagram size={16} />;
+  if (platform === 'linkedin') return <Icon.linkedin size={16} />;
+  if (platform === 'tiktok') return <Icon.tiktok size={16} />;
+  return <Icon.xLogo size={16} />;
+}
+
 export default function Profile({ onNav, profileId, isDemoMode, friendFeed, savedFriends, toggleSaveFriend, onHideFriend, onBlockFriend, onReportFriend }) {
   const person = (isDemoMode ? FRIENDS : friendFeed).find((f) => f.id === profileId);
   const [coverFailed, setCoverFailed] = useState(false);
@@ -126,6 +133,20 @@ export default function Profile({ onNav, profileId, isDemoMode, friendFeed, save
               <span className="mono-tag">Bio</span>
               <p className="profile-bio">{person.bio}</p>
             </div>
+
+            {person.socialLinks?.length ? (
+              <div className="profile-section">
+                <span className="mono-tag">Find them online</span>
+                <div className="profile-social-links">
+                  {person.socialLinks.map((link) => (
+                    <a key={link.platform} className="profile-social-link" href={link.url} target="_blank" rel="noreferrer">
+                      {getSocialIcon(link.platform)}
+                      <span>{link.handle}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             <div className="profile-section">
               <span className="mono-tag">Why you'd click</span>

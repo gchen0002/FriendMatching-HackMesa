@@ -23,6 +23,13 @@ function getProfileMeta(person) {
   return 'Mesa profile';
 }
 
+function getSocialIcon(platform) {
+  if (platform === 'instagram') return <Icon.instagram size={14} />;
+  if (platform === 'linkedin') return <Icon.linkedin size={14} />;
+  if (platform === 'tiktok') return <Icon.tiktok size={14} />;
+  return <Icon.xLogo size={14} />;
+}
+
 export default function Network({
   onNav,
   isDemoMode,
@@ -346,6 +353,23 @@ export default function Network({
                         <span key={t} className={'chip' + (hasCover ? ' network-card-chip' : '')}>{t}</span>
                       ))}
                     </div>
+                    {p.socialLinks?.length ? (
+                      <div className="network-card-socials">
+                        {p.socialLinks.map((link) => (
+                          <a
+                            key={link.platform}
+                            className={'icon-btn' + (hasCover ? ' network-card-icon' : '')}
+                            href={link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            title={link.platform}
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            {getSocialIcon(link.platform)}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </div>
