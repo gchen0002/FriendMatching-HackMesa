@@ -17,7 +17,11 @@ function Selection({ onNav, selected, toggleSelect }) {
               <div key={u.id} className={'sel-card ' + (on ? 'on' : '')}
                 style={disabled ? { opacity: .4, cursor: 'not-allowed' } : {}}
                 onClick={() => !disabled && toggleSelect(u.id)}>
-                <Placeholder label={u.name.toLowerCase()} height={140} />
+                {u.imageUrl ? (
+                  <img src={u.imageUrl} alt={u.name} style={{ width: '100%', height: 140, objectFit: 'cover', border: '1px solid var(--line)', background: 'var(--paper)', display: 'block' }} />
+                ) : (
+                  <Placeholder label={u.name.toLowerCase()} height={140} />
+                )}
                 <h4>{u.name}</h4>
                 <div className="meta">
                   <span>{u.state}</span>

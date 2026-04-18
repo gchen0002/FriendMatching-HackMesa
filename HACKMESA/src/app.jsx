@@ -60,7 +60,7 @@ function App() {
     landing: <Landing onNav={onNav}/>,
     auth: <Auth onNav={onNav} onLogin={setYou} />,
     quiz: <Quiz onNav={onNav} answers={answers} setAnswers={setAnswers} />,
-    results: <Results onNav={onNav} saved={saved} toggleSave={toggleSave} />,
+    results: <Results onNav={onNav} saved={saved} toggleSave={toggleSave} answers={answers} />,
     selection: <Selection onNav={onNav} selected={selected} toggleSelect={toggleSelect}/>,
     friends: <Friends onNav={onNav} selected={selected} variant={variant} setVariant={setVariant}
                       savedFriends={savedFriends} toggleSaveFriend={toggleSaveFriend} />,
